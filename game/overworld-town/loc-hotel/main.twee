@@ -1,0 +1,3533 @@
+:: StoryTitle
+Untitled Story
+
+
+:: StoryData
+{
+  "ifid": "3a31fe68-87ad-49d2-bc66-ef6505370d45",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "zoom": 1
+}
+
+
+:: Sketchy Hotel Dog
+<<effects>>
+
+You enter the room, and the <<person>> releases the source of the barking,
+<<saveNPC 0 "rooms_2">>
+<<endevent>>
+<<beastNEWinit 1 "dog">>
+a <<beasttype>>.
+<br><br>
+
+Freed from <<bhis>> prison, <<bhe>> runs a lap around your legs, then bolts around the room. "I'll need to take a dump", <<he>> went into the toilet as he speaks. "Do help yourself" <<he>> shouts from the toilet.
+<br><br>
+
+You right a fallen table, restore a lamp to its position, test it, then begin to pick up the shredded upholstery. The sofa is soiled, but you can make the room presentable.
+<br><br>
+
+<<set $danger to random(1, 10000)>><<set $dangerevent to 0>>
+<<if ($danger gte (9900 - $allure) or $eventforced) and $eventskip is 0>>
+    <<if $bestialitydisable is "f" or $monster is 1>>
+        You fill a bin bag with shredded papers, then drop to the floor to clear beneath the sofa. It's raised above the ground just enough to fit.
+        <br><br>
+        You're buried from the waist up, when you feel something prod your nethers. The <<beasttype>> mounts you.
+        <br><br>
+
+        <<link [[Next|Sketchy Hotel Dog Rape]]>><<set $molestationstart to 1>><</link>>
+        <br>
+    <<else>>
+        It takes a couple of bin bags, but you get the room clean. When you turn to leave however, you find the <<beasttype>> facing you. <<bHe>> growls, <span class="pink">then lunges.</span>
+        <br><br>
+
+        You manage to escape to the safety of a bedroom, but not unscathed. <<beastescape>>
+        <br><br>
+
+        <<endevent>>
+        <<loadNPC 0 "rooms_2">>
+        <<clearNPC "rooms_2">>
+        "Bad dog!" says the <<person1>><<person>>. You hear a thud, then a whine, then the bedroom door opens. "Sorry about that," <<he>> says. "Here's your pay, and a little extra for the trouble." You make <<moneyGain 25>>.
+        <br><br>
+        <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+        <br>
+    <</if>>
+<<else>>
+    The <<beasttype>> watches with a quizzical expression while you work. It takes a couple of bin bags, but you get the room clean.
+    <<endevent>>
+    <<loadNPC 0 "rooms_2">>
+    <<clearNPC "rooms_2">>
+    "Thanks for the hard work." the <<person1>><<person>> says. You make <<moneyGain 15>>.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Dog Ask
+<<effects>>
+
+The <<person>> strokes <<his>> chin in thought. You hear the barking again, from behind another closed door. The <<person>> turns to face it. "I said shut it!" <<he>> shouts. "Not sure if a <<girl>> like you able to handle the scene.."
+<br><br>
+
+<<link [[Accept (1:00)|Sketchy Hotel Dog]]>><<housekeeping 1 200>><</link>><<ghousekeeping 200>>
+<br>
+<<link [[Refuse|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Dog Rape
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<beastCombatInit>>
+    <<enable_rescue>>
+    <<set $NPCList[0].stance to "top">>
+    <<set $position to "doggy">>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<br><br>
+<<beast $enemyno>>
+<br><br>
+
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Dog Rape Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Dog Rape]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Dog Rape Caught
+
+The <<beasttype>> pulls you in front of <<bhis>> shocked master as he comes out from the toilet.
+<<if $phase isnot 1>>
+    <<ggtrauma>><<ggstress>><<famebestiality 1>>
+<</if>>
+<<endcombat>><<clotheson>>
+
+<<loadNPC 0 "rooms_2">>
+<<clearNPC "rooms_2">>
+<<person1>>
+
+<<if random(1, 2)>>
+    <<He>> soon recovers, <<his>> expression replaced with a grin. "A bad mutt indeed," <<he>> says. "Or did you want this?" <<He>> lifts <<his>> phone from the counter, points it at your face, then crouches to get a close-up of the knot.
+    <br><br>
+
+    "It'll shrink soon enough," <<he>> says. Just hang tight. <<Hes>> not wrong. It exits with a plop. Fluid floods out after it, pooling beneath you.
+    <br><br>
+    "Bad dog!" <<he>> says, kicking <<his>> pet from the room and shutting the door.
+    <br><br>
+    <<link [[Next|Sketchy Hotel Dog Rape Caught 2]]>><</link>>
+    <br>
+<<else>>
+    <<He>> recovers from <<his>> shock, and grabs <<his>> pet by the waist. <<He>> pulls, and the knot exits with a plop. Fluid floods out after it, pooling beneath you.
+    <br><br>
+
+    <<clotheson>>
+    <<exposure>>
+
+    <<He>> drags the creature from the room and shuts the door, and
+    <<if $exposed gte 1>>
+        <<towelup>>
+        avoids eye contact as <<he>> hands you some towels to cover with.
+    <<else>>
+        avoids eye contact as <<he>> turns to face you.
+    <</if>>
+    "I'm so sorry," <<he>> says. "Here's your money, and a little extra for the trouble." You make <<moneyGain 50>>.
+    <br><br>
+    <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Dog Rape Caught 2
+<<effects>>
+
+<<He>> crouches in front of you, and shows you <<his>> phone. "Now how about I upload this to the internet?" <<he>> muses. "I know a good site. Unless you want to convince me otherwise?" <<He>> pats <<his>> crotch. "With your mouth, of course. Your other end belongs to animals."
+<br><br>
+
+<<link [[Agree|Sketchy Hotel Dog Rape Oral]]>><<set $molestationstart to 1>><</link>>
+<br>
+<<link [[Refuse|Sketchy Hotel Dog Rape Refuse]]>><</link>>
+<br>
+<<set $skulduggerydifficulty to 300>>
+<<link [[Deceive|Sketchy Hotel Dog Rape Deceive]]>><</link>><<skulduggerydifficulty>>
+<br>
+
+
+:: Sketchy Hotel Dog Rape Deceive
+<<effects>>
+
+<<skulduggerycheck>>
+<<if $skulduggerysuccess is 1>>
+    You look the <<person>> dead in the eye, and open your mouth. <<He>> drops <<his>> phone in <<his>> haste to remove <<his>> <<print $NPCList[0].clothes.lower.name>>. You swipe it from the ground, shove <<him>> off balance, and run for the door.
+    <br><br>
+    "You fucking brat!" <<he>> shouts, tripping on <<his>> half-removed clothing. You escape the room, down a flight of steps, and around a corner. You hear <<his>> footsteps thunder after you, <span class="green">but <<he>> misses your hiding place.</span>
+    <br><br>
+    You delete the offensive footage from the phone. Now to decide what to do with it. It might be worth something.
+    <br><br>
+
+	<<if $skulduggery lte ($skulduggerydifficulty + 100)>>
+		<<skulduggeryskilluse>>
+	<<else>>
+		<span class="blue">That was too easy. You didn't learn anything.</span>
+		<br><br>
+	<</if>>
+
+    <<link [["Leave it somewhere " + $NPCList[0].pronouns.he + "'ll find"|Sketchy Hotel]]>><<pass 60>><<famegood 1>><<endevent>><</link>>
+    <br>
+    <<link [[Keep it|Sketchy Hotel]]>><<pass 60>><<set $blackmoney += 50>><<endevent>><</link>>
+    <br>
+<<else>>
+    You open your mouth, as if in assent. The <<person>> puts <<his>> phone down to remove <<his>> <<print $NPCList[0].clothes.lower.name>>. You try to snatch it, <span class="red">but <<he>> grasps your wrist.</span>
+    <br><br>
+    "Not so fast, slut." <<He>> grabs the back of your head, and pulls you towards <<his>> groin.
+    <br><br>
+
+	<<if $skulduggery lte ($skulduggerydifficulty + 100)>>
+		<<skulduggeryskilluse>>
+	<<else>>
+		<span class="blue">That was too easy. You didn't learn anything.</span>
+		<br><br>
+	<</if>>
+
+    <<link [[Next|Sketchy Hotel Dog Rape Oral]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Dog Rape Escape
+<<effects>>
+
+<<clotheson>>
+<<endcombat>>
+<<exposure>>
+
+<<loadNPC 0 "rooms_2">>
+<<clearNPC "rooms_2">>
+<<person1>>
+<<if $exposed gte 1>>
+    <<towelup>>
+    You find some towels to cover yourself with right before the <<person>> walks in. <<He>> frowns at your state of dress, but doesn't comment.
+<<else>>
+    The <<person>> enters the room, looks around, and seems satisfied.
+<</if>>
+"Good work." <<he>> says. You make <<moneyGain 15>>.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Dog Rape Finish
+<<effects>>
+
+<<if $enemyarousal gte $enemyarousalmax>>
+
+	<<beastejaculation knot>>
+    <<if _knotted>>
+        The <<beasttype>> moves <<bhis>> hips this way and that, trying to work <<bhis>> penis free. It's lodged deep however. Instead, <<bhe>> pulls your body free from the sofa, and drags you across the carpet.
+        <br><br>
+        "How you doing in there?" calls a voice from the toilet. The <<beasttype>>'s ears prick at the sound of <<bhis>> master's voice. <<bHe>> scrambles towards the toilet, dragging you with <<bhim>>, <span class="pink">still attached to <<bhis>> $NPCList[0].penisdesc.</span>
+        <br><br>
+        <<link [[Grab hold of something|Sketchy Hotel Dog Rape Physique]]>><</link>><<physiquedifficulty 1 16000>>
+        <br>
+        <<link [[Tell it to stop|Sketchy Hotel Dog Rape Tending]]>><</link>><<tendingdifficulty 1 300>>
+        <br>
+        <<link [[Brace yourself|Sketchy Hotel Dog Rape Caught]]>><<trauma 12>><<stress 6>><<famebestiality 1>><<set $phase to 1>><</link>><<ggtrauma>><<gstress>>
+        <br>
+    <<else>>
+        The <<beasttype>> leaves you be. <<tearful>> you escape from beneath the sofa.
+        <br><br>
+
+        <<link [[Next|Sketchy Hotel Dog Rape Escape]]>><</link>>
+        <br>
+    <</if>>
+
+<<elseif $enemyhealth lte 0>>
+	The <<beasttype>> yelps and leaves you be. <<tearful>> you escape from beneath the sofa.
+	<br><br>
+
+    <<link [[Next|Sketchy Hotel Dog Rape Escape]]>><</link>>
+    <br>
+
+<<else>><<set $rescued += 1>>
+    <<if $rapeavoid is 0 and $NPCList[0].stance is "top">>
+        "Coming!" The sound of <<bhis>> master's voice isn't enough to stop the <<beasttype>> fucking you. You try to push <<bhim>> away, but to no avail.
+
+        <<endcombat>>
+
+        <<loadNPC 0 "rooms_2">>
+        <<clearNPC "rooms_2">>
+
+        The <<person1>><<person>> arrives to find you half-trapped beneath the ruined sofa, being fucked by <<his>> pet.
+        <br><br>
+
+        <<if random(1, 2) is 2>>
+            <<He>> laughs, <span class="pink">and points <<his>> phone at you.</span> "A bad mutt indeed," <<he>> says, putting the phone away. <<He>> grasps <<his>> pet by the ear, and pulls it away from you. "Bad dog!" <<He>> drags it into a bedroom while you struggle from beneath the sofa, and locks it inside.
+            <br><br>
+
+            <<link [[Next|Sketchy Hotel Dog Rape Caught 2]]>><</link>>
+            <br>
+        <<else>>
+            <<He>> recovers from <<his>> shock, grasps the creature by the collar, and yanks it away from you. <<He>> drags it into a bedroom while you struggle from beneath the sofa, and locks it inside.
+            <br><br>
+            <<clotheson>>
+            <<exposure>>
+            "I'm very sorry," <<he>> says, unable to look you in the eye.
+            <<if $exposed gte 1>>
+                <<towelup>>
+                <<He>> hands you some towels to cover with.
+            <</if>>
+            "Here's a little extra for the trouble." <<He>> hands you <<moneyGain 30>>.
+            <br><br>
+
+            <<tearful>> you leave the room
+            <br><br>
+
+            <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+            <br>
+        <</if>>
+    <<else>>
+        "Coming!" The <<beasttype>> pulls away at the sound of <<bhis>> master's voice. <<tearful>> you struggle from beneath the sofa.
+        <br><br>
+        <<endcombat>>
+        <<clotheson>>
+        <<exposure>>
+
+        <<loadNPC 0 "rooms_2">>
+        <<clearNPC "rooms_2">>
+        <<person1>>
+        <<if $exposed gte 1>>
+            <<towelup>>
+            You find some towels to cover yourself with right before the <<person>> walks in. <<He>> frowns at your state of dress, but doesn't comment.
+        <<else>>
+            The <<person>> enters the room, looks around, and seems satisfied.
+        <</if>>
+        <br><br>
+        "Mutt giving you trouble?" <<he>> asks. "Sorry. You got the place clean though. Here's your money, with a little extra." You gain <<moneyGain 15>>
+        <br><br>
+
+        <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+        <br>
+    <</if>>
+
+<</if>>
+
+
+:: Sketchy Hotel Dog Rape Oral
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+    <<npcoral>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Dog Rape Oral Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Dog Rape Oral]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Dog Rape Oral Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	"Nice work cleaning up," <<he>> says, dropping some cash on you. "There's a little extra there. You can show yourself out." You make <<moneyGain 30>>.
+	<br><br>
+	<<tearful>> you leave the room.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+    <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+    <br>
+
+<<else>>
+	You shove the <<person>> away from you, snatch <<his>> phone, and bolt for the door. <<He>> tries to pursue, but <<his>> pet darts between your legs, and leaps atop <<him>>.
+	<br><br>
+    "Get off you dumb mutt!" <<tearful>> you escape the room.
+    <br><br>
+
+    You run down a flight of steps, and around a corner. You hear <<his>> footsteps thunder after you, <span class="green">but <<he>> misses your hiding place.</span>
+    <br><br>
+    You delete the offensive footage from the phone. Now to decide what to do with it. It might be worth something.
+    <br><br>
+
+	<<clotheson>>
+	<<endcombat>>
+
+    <<link [[Leave it somewhere they'll find|Sketchy Hotel]]>><<pass 60>><<famegood 1>><</link>>
+    <br>
+    <<link [[Keep it|Sketchy Hotel]]>><<pass 60>><<set $blackmoney += 50>><</link>>
+
+<</if>>
+
+
+:: Sketchy Hotel Dog Rape Physique
+<<effects>>
+
+You grasp the sofa leg, and pull against the <<beasttype>>.
+<<if $physiqueSuccess>>
+    With a loud plop, <span class="green">The <<print $NPCList[0].penisdesc>> comes free.</span> The <<beasttype>> continues into the toilet. <<tearful>> you struggle to your feet.
+    <br><br>
+    <<link [[Next|Sketchy Hotel Dog Rape Escape]]>><</link>>
+    <br>
+<<else>>
+    The tension builds, until the leg <span class="red">snaps off.</span> You're pulled through the room by the <<print $NPCList[0].penisdesc>>, towards the toilet.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Dog Rape Caught]]>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Dog Rape Refuse
+<<effects>>
+
+<<famebestiality 10>>
+"If you insist," <<he>> says. "Here's your money, doggy slut." You make <<moneyGain 15>>.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Dog Rape Tending
+<<effects>>
+
+<<if $tendingSuccess>>
+    "Bad dog!" you say. "Sit!" <span class="green">The <<beasttype>> obeys,</span> as far as it can with you attached to <<bhis>> <<print $NPCList[0].penisdesc>>.
+    <br><br>
+    From this angle you can take the shaft in hand. You manage to pry yourself free. The <<beasttype>> continues scratching the toilet's door.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Dog Rape Escape]]>><</link>>
+    <br>
+<<else>>
+    "B-bad dog," you say. "Let me go at once!" The <<beasttype>>'s master calls from the toilet again. <span class="red"><<bHe>> forgets you, and continues <<bhis>> journey.</span>
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Dog Rape Caught]]>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Events Endure
+<<effects>>
+
+<<He>> <<if $worn.face.type.includes("mask")>>pulls your mask aside, and <</if>>pushes <<his>> lips against yours, tongue-first. It worms and twists into your mouth.<<takeKissVirginity $NPCList[0] rape>>
+<br><br>
+<<He>> pulls away, leaving a connecting thread of saliva,
+<<if random(1, 2) is 2>>
+    <span class="green">then releases you.</span> <<He>> walks away without another glance.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    <span class="red">and bends you over the bannister.</span>
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Events Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Events Fight
+<<if $fightstart is 1>>
+	<<set $fightstart to 0>>
+	<<neutral 1>>
+	<<maninit>>
+	<<set $enemytrust -= 100>>
+	<<set $enemyanger += 200>>
+	<<npcidlegenitals>>
+    <<if Time.dayState is "night">>
+        <<enable_rescue>>
+    <</if>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend or ($pain gte 100 and $willpowerpain is 0) or $rescue is 1 and $alarm is 1>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Fight Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Fight]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Events Fight Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	They're too drained to stop you escaping.
+	<br><br>
+	<<tearful>> you run up a staircase, and take cover around a random corner.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+
+<<elseif $enemyhealth lte 0>>
+	The trio back away from you. "Crazy <<bitch>>," the <<person1>><<person>> says. They walk away.
+    <<famescrap 3>>
+	<br><br>
+	<<tearful>> you gather yourself.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<elseif $rescue is 1>>
+    <<generate4>><<person4>>
+    <span class="teal">A door opens down the hallway,</span> and a <<person>> pokes <<his>> head out. "What happened here" <<he>> says. "Scram, or I'll ask the manager."
+    <br><br>
+    The <<person1>><<person>> gives you a sneering glance, then the trio leave you be.
+    <br><br>
+    <<clotheson>>
+    <<endcombat>>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+	<<tearful>> you fall to the ground. You're too hurt to continue fighting.
+	<br><br>
+    The <<person1>><<person>> grabs your hair, and pulls you to your knees.
+    <br><br>
+    <<link [[Next|Sketchy Hotel Events Knees]]>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Events Ignore
+<<effects>>
+
+<<if $rng gte 11>>
+    You try to ignore the footsteps behind you. <span class="green"><<He>> stops by one of the rooms, and enters.</span> It was a coincidence.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    You try to ignore the footsteps behind you, but they seem to be speeding up, getting closer. You glance behind you, just in time to catch the <<person>> break into a run. <<He>> grabs your waist and pins you against the wall.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Events Rape 2]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Events Knees
+<<effects>>
+
+The <<person1>><<person>> grasps your hair with one hand, and adjusts <<his>> <<print $NPCList[0].clothes.lower.name>> with the other, exposing <<his>>
+<<if $NPCList[0].penis isnot "none">>
+    <<print $NPCList[0].penisdesc>>.
+<<else>>
+    pussy.
+<</if>>
+The <<person2>><<person>> and <<person3>><<person>> follow suit. They start masturbating, inches from your face.
+<br><br>
+
+"Hold still <<bitch>>," the <<person1>><<person>> says. "You're in our territory, so we're gonna mark you as ours." <<He>> tightens <<his>> grip as they approach orgasm, to make sure you can't escape.
+<br><br>
+
+<<if $NPCList[0].penis isnot "none">>
+    Semen erupts from the <<person1>><<person>>'s <<print $NPCList[0].penisdesc>>. <<random_semen_head>>
+<<else>>
+    The <<person1>><<person>>'s pussy twitches, and squirts. <<random_goo_head>>
+<</if>>
+<br>
+<<if $NPCList[1].penis isnot "none">>
+    Semen erupts from the <<person2>><<person>>'s <<print $NPCList[1].penisdesc>>. <<random_semen_head>>
+<<else>>
+    The <<person2>><<person>>'s pussy twitches, and squirts. <<random_goo_head>>
+<</if>>
+<br>
+<<if $NPCList[2].penis isnot "none">>
+    Semen erupts from the <<person3>><<person>>'s <<print $NPCList[2].penisdesc>>. <<random_semen_head>>
+<<else>>
+    The <<person3>><<person>>'s pussy twitches, and squirts. <<random_goo_head>>
+<</if>>
+<br><br>
+
+"That should do it," pants the <<person1>><<person>>. <<He>> releases your hair, and the trio walk away.
+<br><br>
+
+<<clotheson>>
+<<endcombat>>
+
+<<link [[Next|Sketchy Hotel]]>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Events Rape
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+    <<if Time.dayState isnot "night">>
+	    <<enable_rescue>>
+    <</if>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Rape Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Rape]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Events Rape 2
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+    <<if Time.dayState is "night">>
+	    <<enable_rescue>>
+    <</if>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Rape 2 Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Rape 2]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Events Rape 2 Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	<<He>> leaves you slumped against the wall, and walks away.
+	<br><br>
+	<<tearful>> you rise to your feet.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+<<elseif $enemyhealth lte 0>>
+	You shove the <<person>> against the wall. <<He>> thuds against it, and slumps to the ground.
+	<br><br>
+	<<tearful>> you make your escape.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+<<else>>
+	<<set $rescued += 1>>
+    <<generate2>><<person2>>
+    A heavy thud echoes from one of the nearby rooms. "Shut the fuck up out there," shouts a <<personsimple>>'s voice. "Or I'll call the police."
+    <br><br>
+    The <<person1>><<person>> hesitates, then walks away.
+    <br><br>
+    <<tearful>> you struggle to your feet.
+    <br><br>
+	<<clotheson>>
+	<<endcombat>>
+<</if>>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Events Rape Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	<<He>> walks away without looking back.
+	<br><br>
+	<<tearful>> you gather yourself.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+
+<<elseif $enemyhealth lte 0>>
+    <<He>> trips and tumbles down the stairs.
+    <br><br>
+
+    <<He>> staggers to <<his>> feet, and limps away.
+	<br><br>
+
+	<<tearful>> you gather yourself.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+
+<<else>>
+	<<set $rescued += 1>>
+	"What the fuck is going on down there?" shouts a voice from above. The <<person>> pulls away from you, throws an anxious glance up the stairwell, then hurries in the opposite direction.
+	<br><br>
+	<<tearful>> you gather yourself.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+
+<</if>>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Events Run
+<<effects>>
+
+You feel a surge of anxiety as you break into a run, worrying that the <<person1>><<person>> will give chase. <<He>> does not, but it takes a while for your pulse to slow.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Events Scream
+<<effects>>
+
+You scream for help. The <<person>> shoves you against the wall. "Expecting coppas?" <<he>> asks.
+<br><br>
+
+<<if Time.dayState isnot "night">>
+    <<generate4>><<person4>>
+    "No one's-"
+    <br><br>
+    <span class="teal">A door opens down the hallway,</span> and a <<person>> pokes <<his>> head out. "You fucking kids again," <<he>> says. "Scram, or I'll call the police."
+    <br><br>
+    The <<person1>><<person>> gives you a sneering glance, then leaves you be.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    "No one's gonna help you."
+    <br><br>
+
+    <i>People are rarely willing to investigate screams at night.</i>
+    <br><br>
+
+    <<link [[Get on your knees|Sketchy Hotel Events Knees]]>><<sub 1>><</link>>
+    <br>
+    <<link [[Fight|Sketchy Hotel Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Events Slap
+<<effects>>
+
+<<if $physiqueSuccess>>
+    You smack the <<person>>'s face. <span class="green"><<He>> recoils from the blow,</span> trips, and tumbles down the stairs.<<ltrauma>><<trauma>>
+    <br><br>
+
+    <<He>> staggers to <<his>> feet, and limps away.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    You try to slap the <<person>>, <span class="red">but <<he>> grasps your wrist,</span> and uses the momentum to bend you over the bannister.
+    <br><br>
+    <<link [[Next|Sketchy Hotel Events Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Events Solicit
+<<effects>>
+
+<<if $phase is 1>>
+    <<set $seductiondifficulty to 6000>>
+<<elseif $phase is 2>>
+    <<set $seductiondifficulty to 8000>>
+<<else>>
+    <<set $seductiondifficulty to 10000>>
+<</if>>
+<<seductioncheck>>
+<br><br>
+<<if $seductionskill lt 1000>>
+	<span class="gold">You feel more confident in your powers of seduction.</span>
+	<br><br>
+<</if>>
+<<seductionskilluse>>
+
+"I'm for sale, you know," you say, bending over and giving your <<bottom>> a shake.
+<<promiscuity3>>
+
+<<if $seductionrating gte $seductionrequired>>
+
+	The <<person>>'s eyes flash. <<His>> phone starts ringing, <span class="green">but <<he>> ignores it.</span> "My room's this way."
+	<br><br>
+    <<He>> leads you down the hall, and holds the door open for you to enter first.
+
+    <<if $rng gte 81>>
+        The room is dimly lit, and it takes a moment for your eyes to adjust, and for you to notice the BDSM paraphernalia covering the walls.
+        <br><br>
+        The <<person>> grabs you from behind, and bends you over <<his>> knee. "Don't worry," <<he>> says. "I'm in the mood for something light."
+        <br><br>
+
+        <<link [[Next|Sketchy Hotel Events Solicit Spank]]>><<set $sexstart to 1>><</link>>
+        <br>
+    <<else>>
+        It's a normal looking room, if a bit dirty. <<He>> shuts the door behind <<him>>, and gropes you at once.
+        <br><br>
+
+        <<link [[Next|Sketchy Hotel Events Solicit Sex]]>><<set $sexstart to 1>><</link>>
+        <br>
+    <</if>>
+
+<<else>>
+
+    The <<person>>'s eyes flash, but <<his>> phone starts ringing. <<He>> looks away and answers it. "Yes honey. I'll be right there." <<He>> puts the phone away, gives you a sheepish look, <span class="red">and walks away.</span>
+	<br><br>
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Events Solicit Sex
+<<if $sexstart is 1>>
+	<<set $sexstart to 0>>
+	<<consensual>>
+	<<set $consensual to 1>>
+	<<neutral 1>>
+	<<maninit>>
+	<<set $enemytrust += 100>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Solicit Sex Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Solicit Sex]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Events Solicit Sex Finish
+<<set $outside to 0>><<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	The <<person1>><<person>> lies on <<his>> sofa, and fishes for cash in <<his>> pocket. "Here you go," <<he>> says. "Buy yourself something nice."
+	<br><br>
+    <<if $phase is 1>>
+        You make <<moneyGain 50>>.
+    <<elseif $phase is 2>>
+        You make <<moneyGain 100>>.
+    <<else>>
+        You make <<moneyGain 150>>.
+    <</if>>
+    <br><br>
+	<<tearful>> you leave the room.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+<<else>>
+	The <<person1>><<person>> falls back on <<his>> sofa, nursing an injury.
+	<br><br>
+	<<tearful>> you run from the room.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+<</if>>
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Events Solicit Spank
+<<if $sexstart is 1>>
+	<<set $sexstart to 0>>
+	<<consensual>>
+	<<set $consensual to 1>>
+	<<neutral 1>>
+	<<maninit>>
+    <<npcspank>>
+	<<set $enemyanger += 150>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+<<if _combatend or $enemyanger lte 20>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Solicit Spank Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Events Solicit Spank]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Events Solicit Spank Finish
+<<set $outside to 0>><<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	The <<person1>><<person>> lies back on the sofa, leaving your <<bottom>> raw. "That'll do," <<he>> says. <<He>> reaches into <<his>> pocket, and hands you the money.
+	<br><br>
+	<<if $phase is 1>>
+        You make <<moneyGain 50>>.
+    <<elseif $phase is 2>>
+        You make <<moneyGain 100>>.
+    <<else>>
+        You make <<moneyGain 150>>.
+    <</if>>
+    <br><br>
+	<<tearful>> you leave the room.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+<<elseif $enemyhealth lte 0>>
+	The <<person1>><<person>> recoils, and you twist out of <<his>> grasp. <<He>> reaches for a riding crop hanging on the wall, but leans too far on one end of the sofa, toppling it, and <<him>>.
+	<br><br>
+	<<tearful>> you leave the room.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+<<else>>
+	The <<person1>><<person>> ceases <<his>> assault. "That'll do me," <<he>> says, reaching into <<his>> pocket. <<He>> hands you the money. "You can show yourself out."
+	<br><br>
+	<<if $phase is 1>>
+        You make <<moneyGain 50>>.
+    <<elseif $phase is 2>>
+        You make <<moneyGain 100>>.
+    <<else>>
+        You make <<moneyGain 150>>.
+    <</if>>
+    <br><br>
+	<<tearful>> you leave the room.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+<</if>>
+
+<<link [[Next|Sketchy Hotel]]>><<set $eventskip to 1>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Events Stomp
+<<effects>>
+
+<<if $physiqueSuccess>>
+    You stomp on the <<person>>'s foot. <span class="green"><<He>> releases you with a cry,</span> trips, and tumbles down the stairs.<<ltrauma>><<trauma>>
+    <br><br>
+
+    <<He>> staggers to <<his>> feet, and limps away.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    You stomp on the <<person>>'s foot. <<He>> grimaces, <span class="red">but grips you with more force.</span> "Nice try." <<He>> bends you over the bannister.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Events Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Beg
+<<effects>>
+
+"Pl-please let me go," you say, tears streaming from your eyes. "I w-won't tell anyone you attacked me. I promise."
+<br><br>
+
+You stir the <<person1>><<person>>'s pity, and <<he>> releases your arm. The <<person2>><<person>> soon follows. You hurry away, but you feel their eyes following you.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Exposed Crouch
+<<effects>>
+
+You stay crouched behind the plant as the <<person>> walks closer. <<He>> frowns at you, and stops. "Something the matter?" <<he>> asks.
+<br><br>
+
+<<He>> can't see anything beneath your neck. You resist the urge to cover your <<lewdness>>.
+<br><br>
+
+<<link [[Say you're tying your shoelace|Sketchy Hotel Exposed Shoe]]>><</link>><<englishdifficulty 1 1000>>
+<br>
+<<link [[Say you're naked behind the plant|Sketchy Hotel Exposed Naked]]>><</link>>
+<br>
+<<link [["Tell " + $NPCList[0].pronouns.him + " to go away"|Sketchy Hotel Exposed Tell]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Exposed Dash
+<<effects>>
+
+<<if random(1, 2) is 2>>
+    You dash by the door and hurry down the corridor on the other side. You spare a glance before turning a corner. <span class="green">No one follows.</span>
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    <<generate1>><<person1>>
+    You dash by the door and hurry down the corridor on the other side.
+    <br><br>
+    <span class="red">"Hey!"</span> shouts a voice behind you. "Where you going, slut?"<<ggstress>>
+    <br><br>
+    You break into a run, your face aflame.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Door
+<<effects>>
+
+<<if random(1, 2) is 2>>
+    You dash to one of the doors, and try the handle. <span class="green">It's unlocked.</span> You rush inside before anyone catches a glimpse of you.
+    <br><br>
+    You wait for the voices outside to pass, and examine the room. It looks typical. There are some towels hanging on the radiator.
+    <br><br>
+
+    <<link [[Take the towels|Sketchy Hotel]]>><<towelup>><<set $eventskip to 1>><<crimeUp 10 "petty">><</link>><<crime "petty">>
+    <br>
+    <<link [[Leave|Sketchy Hotel]]>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    <<generate1>><<generate2>><<generate3>><<generate4>><<person1>>
+    You dash to one of the doors, and try the handle. <span class="red">It's locked.</span> You rush to the other, but it's too late. A <<person1>><<person>> and <<person2>><<person>> walk around the corner ahead. You turn, and see a <<person3>><<person>> and <<person4>><<person>> in the other direction. All four stop to observe you.<<gtrauma>><<gstress>>
+    <br><br>
+
+    <<link [[Run|Sketchy Hotel Exposed Door Run]]>><</link>>
+    <br>
+    <<link [[Escape through the window|Sketchy Hotel Exposed Window Caught]]>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Door Run
+<<effects>>
+
+<<covered>> You run by the <<person1>><<person>> and <<person2>><<person>>, but they stop you in your tracks.
+<br><br>
+<<fameexhibitionism 4>>
+"You get locked out of your room?" the <<person1>><<person>> asks. They hold a forearm each, and force you against the wall, leaving you unable to cover yourself.
+<br><br>
+
+The <<person3>><<person>> and <<person4>><<person>> arrive, and the four stand gawking at your exposed body.
+<br><br>
+
+<<link [[Struggle|Sketchy Hotel Exposed Struggle]]>><</link>><<physiquedifficulty 1 16000>>
+<br>
+<<link [[Endure|Sketchy Hotel Exposed Endure]]>><<trauma 6>><<stress>><</link>><<gtrauma>><<gstress>>
+<br>
+<<if $submissive gte 1500>>
+    <<link [[Beg|Sketchy Hotel Exposed Beg]]>><</link>><<submissivetext>>
+    <br>
+<<elseif $submissive lte 500>>
+    <<link [[Threaten|Sketchy Hotel Exposed Threaten]]>><</link>><<defianttext>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Endure
+<<effects>>
+
+You endure their probing eyes. The <<person1>><<person>> and <<person2>><<person>> release you just long enough to grasp your hips and spin you to face the wall. They pin you there, pushing your back down and forcing your <<bottom>> up into a vulnerable position.
+<br><br>
+
+They take turns groping, squeezing, and giving you the occasional spank. The <<person3>><<person>> steps behind you and grasps your hips, as if <<he>> means to escalate the violation, but further voices down the hall spook all four into fleeing.
+<br><br>
+
+You don't know if the newcomers are any better, so you flee as well.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Exposed Naked
+<<effects>>
+
+<<set $seductiondifficulty to 8000>>
+<<seductioncheck>>
+<br><br>
+<<if $seductionskill lt 1000>>
+	<span class="gold">You feel more confident in your powers of seduction.</span>
+	<br><br>
+<</if>>
+<<seductionskilluse>>
+
+"I'm naked behind this," you say. "Don't look."
+<br><br>
+<<if $seductionrating gte $seductionrequired>>
+
+	<<He>> laughs, <span class="green">and covers <<his>> eyes.</span> "I best be careful then," <<he>> says, walking by without looking.
+	<br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+
+<<else>>
+
+	"Naked you say?" <<he>> says, <span class="red">stepping around the plant for a closer look.</span> <<covered>>
+	<br><br>
+
+    <<He>> throws a glance down the corridor, then slaps <<his>> hand over your mouth.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Exposed Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Pick
+<<effects>>
+
+You pick up the plant, and walk towards the <<person>> as if nothing were amiss. You don't think <<he>> can see through the leaves, but there'll be no hiding if <<he>> glances your way as <<he>> passes.
+<br><br>
+
+<<if random(1, 10) lte 4>>
+    <<He>> frowns at the plant, but then looks away, <span class="green">and keeps <<his>> gaze fixed ahead while <<he>> passes.</span>
+    <br><br>
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    <<He>> frowns at the plant, then at you. "Where you going with that?" <<he>> asks. "That's part of the decor." <span class="red"><<He>> grasps the other side of the pot.</span>
+    <br><br>
+
+    <<link [[Run|Sketchy Hotel Exposed Run]]>><</link>><<athleticsdifficulty 1 1000>>
+    <br>
+    <<link [[Wrestle|Sketchy Hotel Exposed Wrestle]]>><</link>><<physiquedifficulty 1 16000>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Rape
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+    <<if Time.dayState isnot "night">>
+        <<enable_rescue>>
+    <</if>>
+    <<hand_gag 0 left>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Exposed Rape Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Exposed Rape]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Rape Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	<<He>> walks away without giving you another glance.
+	<br><br>
+	<<tearful>> you climb to your feet.
+	<br><br>
+<<elseif $enemyhealth lte 0>>
+	"Fucking psycho," <<he>> mutters, backing away from you and eyeing you warily. After some distance, <<he>> turns and runs.
+	<br><br>
+	<<tearful>> you get your bearings.
+	<br><br>
+<<else>>
+	<<set $rescued += 1>>
+	The <<person1>><<person>> jumps as a few heavy thuds hit the door behind <<him>>. <<He>> walks away without sparing another glance.
+	<br><br>
+	<<tearful>> you climb to your feet.
+	<br><br>
+
+<</if>>
+<<clotheson>>
+<<endcombat>>
+<<link [[Next|Sketchy Hotel]]>><<set $eventskip to 1>><</link>>
+
+
+:: Sketchy Hotel Exposed Run
+<<effects>>
+
+You release the pot and run.
+<<if $athleticsSuccess>>
+    <<He>> gets a clear look at your behind, <span class="green">but isn't able to keep up.</span> You escape to another part of the building.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    <<He>> gets a clear look from behind, and drops the pot to chase you. <span class="red"><<He>> tackles you to the ground,</span> and slaps <<his>> hand over your mouth.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Exposed Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Shoe
+<<effects>>
+
+"My shoe came untied," you say. "That's all."
+<br><br>
+<<if $englishSuccess>>
+    <<He>> shrugs, and continues on <<his>> way <span class="green">without another glance.</span>
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    <<His>> frown deepens, <span class="red">and <<he>> walks around the plant to get a better look.</span> <<covered>>
+    <br><br>
+
+    <<He>> throws a glance down the corridor, then slaps <<his>> hand over your mouth.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Exposed Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Exposed Struggle
+
+
+
+:: Sketchy Hotel Exposed Tell
+<<effects>>
+
+"Go away," you say.
+<br><br>
+
+"Why?" <<he>> asks. "You hiding something?" <span class="red">stepping around the plant for a closer look.</span> <<covered>>
+<br><br>
+
+<<He>> throws a glance down the corridor, then slaps <<his>> hand over your mouth.
+<br><br>
+
+<<link [[Next|Sketchy Hotel Exposed Rape]]>><<set $molestationstart to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Exposed Threaten
+<<effects>>
+
+"Try me, creeps," you spit, clenching your fists. "You'll be kissing pavement if you don't let me go. Now."
+<br><br>
+
+The <<person1>><<person>> seems caught off guard by the boldness of your threat, and <<his>> grip loosens. It's just enough. You twist an arm loose, and give <<him>> an uppercut. The <<person2>><<person>> is quick to react and makes a grab for you, but you turn the <<person1>><<person>> and use <<him>> as a human shield.
+<br><br>
+
+You pushe them both aside and run. You feel their eyes following you, but none of them have the guts to follow you.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Exposed Window
+<<effects>>
+
+You climb through the window, and onto the ledge below. You hide there, until the voices above pass.
+<br><br>
+
+<<if Time.dayState is "night">>
+    You avoid looking at the dark street below. You're many stories up. Careful, you climb back through the window and into the deserted corridor.
+    <br><br>
+<<else>>
+    You're many stories up, and avoid looking down.
+    <br><br>
+    <<generate1>><<generate2>><<person1>>
+    <<if $exposed gte 2>>
+        "Oi <<girl>>!" shouts a <<personsimple>>'s voice from below. "What you doing out there without any clothes?"
+    <<else>>
+        "Oi <<girl>>!" shouts a <<personsimple>>'s voice from below. "What you doing out there with so little clothing?"
+    <</if>>
+    <br><br>
+    Your face flushes as you hurry to climb back through the window, and into the deserted corridor. You were too high for any onlookers to recognise your face, at least.<<gstress>><<stress 6>>
+    <br><br>
+<</if>>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Exposed Window Caught
+<<effects>>
+
+You climb through the window, and avoid looking down as you shimmy along the ledge. The <<person1>><<persons>> head pokes through after you. "Careful <<girl>>," <<he>> says, leering. "Why don't you come back inside? I'll keep you safe."
+<br><br>
+
+<<if Time.dayState is "night">>
+<<else>>
+    <<generate5>><<person5>>
+    <<if $exposed gte 2>>
+        "Oi <<girl>>!" shouts a <<personsimple>>'s voice from below. "What you doing out there without any clothes?"
+    <<else>>
+        "Oi <<girl>>!" shouts a <<personsimple>>'s voice from below. "What you doing out there with so little clothing?"
+    <</if>>
+    More voices, and laughter, join in. Your face flushes, but you're too high for anyone to recognise your face.<<ggstress>><<stress 6>>
+    <br><br>
+<</if>>
+
+You arrive at another window, this one leading to a separate corridor. You climb through, and escape before they can track you down.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Exposed Wrestle
+<<effects>>
+
+<<if $physiqueSuccess>>
+    You wrestle over the potted plant, <span class="green">and manage to tear it from <<his>> grip.</span> <<He>> falls on <<his>> ass, and leans back while nursing the injury.
+    <br><br>
+
+    You back away, keeping the pot between you, until you turn a corner. You drop the plant and run.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+    <br>
+<<else>>
+    You wrestle over the potted plant, <span class="red">but <<he>> tears it from your grip.</span> You fall on your <<bottom>>, everything exposed. <<covered>>
+    <br><br>
+
+    <<He>> drops the plant in surprise, but recovers fast, leaping forward and slapping a hand over your mouth.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Exposed Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room
+<<effects>>
+
+<<if isPlayerNonparasitePregnancyEnding()>>
+    <<set _noWake to true>>
+	<<pregnancyWatersBrokenPassout "hookah">>
+<<else>>
+    <<if $room_state is 3>>
+        You are inside Room 211, it is well equipped with furniture. There's a bed, a TV, a sofa, 2 shelves, a painting on the wall, a chair and a desk. You can look at the sea from the balcony. 
+        It is <<if $weather is "rain">>raining<<elseif $weather is "snow">>snowing<<else>>clear day outside.<</if>>
+        <<if $rng gte 81>>
+            The controller are on the ground.
+        <<elseif $rng gte 61>>
+            The painting on the wall tilted.
+        <<elseif $rng gte 41>>
+            The chair fell off and the cushions are all around the places.
+        <<elseif $rng gte 21>>
+            The painting is different than yesterday.
+        <<else>>
+            Furnitures remain as it is.
+        <</if>>
+        <br><br>
+        <<link [[Look at social media|Sketchy Hotel Unoccupied Room Work]]>><<endevent>><<set $eventskip to 1>><</link>>
+        <br>
+        <<link [[Rest|Sketchy Hotel Unoccupied Room Rest]]>><<endevent>><<set $eventskip to 1>><</link>>
+        <br>
+        <<link [[Leave|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+        <br>
+    <<elseif $room_state is 1>>
+        You are inside Room 211. The furniture are covered with white sheet, it'll take some time to clean everything.
+        <br><br>
+
+        <<link [[Clean (3:00)|Sketchy Hotel Unoccupied Room Clean]]>><<set $room_state to 3>><<pass 180>><</link>>
+        <br>
+        <<link [[Leave|Sketchy Hotel]]>><</link>>
+        <br>
+    <<elseif $room_state is undefined>>
+        <<set $room_state to 1>>
+        You noticed there is a hotel room stating '211' that you haven't seen previously. And almost too hidden that most people are missing it. You tried the door knob and found out the room didn't locked.
+        <br><br>
+        You opened the door and peer inside. Most of the furniture are covered up with white sheet, seems it's not in use for quite some time.
+        <<if $promiscuity gte 55>>
+            <span class='lewd'>A lewd idea strikes you.</span> You could utilise this abandoned room for personal purpose.
+        <</if>>
+        <br><br>
+        <span class="gold">You've discovered Room 211.</span>
+        <br><br>
+        <<link [[Leave|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+        <br>
+    <<else>>
+        You are inside Room 211, it is well equipped with furniture. There's a bed, a TV, a sofa, 2 shelves, a painting on the wall, a chair and a desk. You can look at the sea from the balcony. 
+        It is <<if $weather is "rain">>raining<<elseif $weather is "snow">>snowing<<else>>outside.<</if>>
+        <br><br>
+        <<if $rng gte 81>>
+            The controller are on the ground.
+        <<elseif $rng gte 61>>
+            The painting on the wall tilted.
+        <<elseif $rng gte 41>>
+            The chair fell off and the cushions are all around the places.
+        <<elseif $rng gte 21>>
+            The painting is different than yesterday.
+        <<else>>
+            Furnitures remain as it is.
+        <</if>>
+        <<link [[Approach the bed|Sketchy Hotel Unoccupied Room Rest]]>><<endevent>><<set $eventskip to 1>><</link>>
+        <<link [[Leave|Sketchy Hotel]]>><</link>>
+    <</if>>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Rest
+<<effects>>
+<<set _passage to 'Sketchy Hotel Unoccupied Room Bed'>>
+<<set $wardrobe_location to 'temple'>>
+<<set $storeLocation to 'Sketchy Hotel Bed'>>
+
+You turned on the TV and chilled on the sofa while looking at the social media. Enjoying this rare, quiet time.
+<br><br>
+
+<<if Time.dayState is 'night'>>
+	When looking out, streets are bustling with crowds. Nightlife is rich here.
+<<elseif Time.dayState is 'day'>>
+	When looking out, the beach is filled with tourists. And seems like there are festivals and concerts ongoing afar.
+<<elseif Time.dayState is 'dawn'>>
+	When looking out, people are preparing to start their day. Streets are slowly filling up with vehicles.
+<<elseif Time.dayState is 'dusk'>>
+	When looking out, the beach is still crowded with tourists.
+<</if>>
+<br><br>		
+
+<<bedicon>><<link [[Strip and get in bed|Sketchy Hotel Unoccupied Room Bed]]>><<undressSleep 'Temple Bunk Bed'>><</link>>
+<br>
+<<wardrobeSelection true>>
+<<if $earSlime.alwaysSleepNaked is false>>
+        <<set _bed to Furniture.get('bed')>>
+        <<if _bed is undefined or _bed is null>>
+            <<set _bed to Furniture.get('bed','bed')>>
+        <</if>>
+        <<furnitureicon _bed.iconFile>>
+        <<capture _index>>
+            <<link [['Wear current outfit and climb in bed'|_passage]]>><<saveTempHairStyle>><</link>>
+        <</capture>>
+        <br>
+<<else>>
+    <<if $possessed>>
+        <span class='red'>The slime in your head is silent.</span>
+        <br>
+    <<else>>
+        <span class='red'>The slime is not allowing you to sleep with anything on.</span>
+        <br>
+    <</if>>
+<</if>>
+<<wearoutfit>>
+<br>
+<<roomoptions>>
+<br>
+<<bathroomicon 'shower'>><<link [[Bathroom (0:01)|Sketchy Hotel Unoccupied Room Rest Showers]]>><<pass 1>><</link>>
+<br>
+<<mirroricon>><<link [[Mirror|Sketchy Hotel Unoccupied Room Mirror]]>><<preMirror>><<endevent>><</link>>
+<br><br>
+<<ind>><<link [[Leave|Sketchy Hotel Unoccupied Room]]>><</link>>
+
+
+:: Sketchy Hotel Unoccupied Room Bed
+<<nightmareCheck 'Sketchy Hotel Unoccupied Room Bed Sleep'>>
+<<generateSleepLinks 'Sketchy Hotel Unoccupied Room Bed Sleep'>>
+<<link [[Climb out of bed|Sketchy Hotel Unoccupied Room]]>><<storeon 'Temple Bunk Bed'>><<set $wardrobe_location to 'temple'>><<loadTempHairStyle>><<endevent>><</link>>
+
+
+:: Sketchy Hotel Unoccupied Room Bed Sleep
+<<set _autosavehere to true>>
+<<sleep>>
+<<if $rng gte 21>>
+	<<effects>>
+    Something is groping your butt, but you sense no one is inside the room. <<stress 6>><<gstress>><<trauma 6>><<gtrauma>>
+    <br><br>
+    You tried your best to sleep.
+<<else>>
+	<<effects>>
+    <<wakingEffects $sleepHoursTotal>>
+    <<if $nightmares gte 1 and $controlled is 0>>
+        You dream you are being hunted by something <<if ['haunt', 'despair'].includes($wraith.state) and $rng lte 25>>pale<<else>>dark<</if>> and terrible.
+    <<else>>
+        <<if $specialClothesEffects.bimboTotal gte random(100,1000) or $arousal gte 9000>>
+            Your sleep is plagued by dirty dreams.
+            <<arousal `$specialClothesEffects.bimboTotal / 10 * $sleepHoursTotal`>>
+            <<arousal `100 * $sleepHoursTotal`>>
+            <<if $arousal gte $arousalmax>>
+                They push you over the edge.
+                <<orgasm>>
+            <</if>>
+        <<elseif !_wakingEffect>>
+            You sleep soundly.
+            <br><br>
+        <</if>>
+    <</if>>
+    <<sleepeffects>>
+
+    <<set $wardrobe_location to 'temple'>>
+    <<wardrobeSelection true>>
+    <<radiooutfits>>
+<</if>>
+<br><br>
+<<link [[Get up|Sketchy Hotel Unoccupied Room Rest]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Unoccupied Room Mirror
+<<effects>>
+<<link [[Step away|Sketchy Hotel Unoccupied Room Rest]]>><<unset $mirrorMenu>><<unset $bodywritingSet>><</link>>
+<br>
+<<mirror 'reflection'>>
+
+
+:: Sketchy Hotel Unoccupied Room Rest Showers
+<<effects>>
+
+A decent size bathroom with a bathtub, and a small adjoining space for undressing.
+<br><br>
+
+<<bathroomicon 'shower'>><<link [[Shower (0:20)|Sketchy Hotel Unoccupied Room Rest Shower Take]]>><<undress>><<pass 20>><</link>>
+<br>
+<<ind>><<link [[Leave|Sketchy Hotel Unoccupied Room Rest]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Unoccupied Room Rest Shower Take
+<<effects>>
+
+<<wash>>
+You filled up the bathtub with warm water then undress and soak yourself in. The warm water relaxes your mind.
+<br><br>
+
+You dry yourself, dress, and return to the room.
+<br><br>
+
+<<link [[Leave|Sketchy Hotel Unoccupied Room Rest]]>><<clotheson>><</link>>
+
+
+:: Sketchy Hotel Unoccupied Room Clean
+<<effects>>
+
+You remove the sheets around the furniture and start to clean. Starting with the dustpan and brush for dust cleaning on the furniture, then apply a vacuum cleaner to the floor. 
+<br><br>
+Then finish the cleaning by using a wet rag for every nook and cranny. 
+<br><br>
+
+<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Unoccupied Room Work
+<<effects>>
+You started to look for 'clients' online while doing some preparations.
+<br><br>
+You light up the incense and tune down the lights, letting the sweet incense fill up the room. You won't need to wait long. How do you want to present yourself?
+<br><br>
+
+<<link [[New Customer|Sketchy Hotel Unoccupied Room Work New Customer]]>><</link>><<note "More fame" "blue">>
+<br>
+<<link [[Regulars|Sketchy Hotel Unoccupied Room Work Regulars]]>><</link>><<note "More money" "blue">>
+<br>
+
+
+:: Sketchy Hotel Unoccupied Room Work New Customer
+<<effects>>
+
+You wait by the door.
+<<cleareventpool>>
+
+<<addinlineevent "room_work_newbies_1" 1>>
+    You're waiting in the lobby to lead the customer to Room 211..
+    <br><br>
+    <<generate1>><<person1>>A <<person>> walks right by you, and looks around.
+    <br><br>
+    "Are you the <<person>> on X?" you say. <<He>> jumps when <<he>> hears your voice. <<He>> opens <<his>> mouth to speak. "You're rig-"
+    <br><br>
+    "Welcome to Room 211," you interrupt, as if predicting a question. "please follow me. The room is a bit hard to find."
+    <br><br>
+    <<He>> pays you, and sits on the bed inside Room 211 before bathing. You've made <<moneyGain 200>>.
+    <br><br>
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Single Sex]]>><<pass 60>><<set $sexstart to 1>><</link>>
+    <br>
+<</addinlineevent>>
+
+<<addinlineevent "room_work_newbies_2" 1>>
+    You're waiting in the lobby to lead the customer to Room 211..
+    <br><br>
+    <<generate1>><<generate2>><<person1>>
+    A <<person>> and <<person2>><<person>> enter the hotel, which the looks of <<person2>><<person>> are matching the description.
+    <br><br>
+    "Hi~" you say. "Welcome to Room 211,"
+    <br><br>
+    "I saw your profile saying threesome is allowed, right?" the <<person2>><<person>> asked. "Yup" you replied.
+    <br><br>
+    "Cool, here is the money. I throw some extras in, looking forward to your service." the <<person2>><<person>> handing you money for two customers. You make <<moneyGain 500>>.
+    <br><br>
+
+    The pair sit on the sofa inside Room 211 after cleaning themself.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Pair Sex]]>><<pass 60>><<set $sexstart to 1>><</link>>
+    <br>
+<</addinlineevent>>
+
+<<addinlineevent "room_work_newbies_3" 1>>
+    You heard the door knocking while preparing for next customer..
+    <br><br>
+    <<generate1>><<person1>>
+    A <<person1>><<person>> enter, looking unsure.
+    <br><br>
+    "Welcome to Room 211-" you say. "Who are you?"
+    <br><br>
+    "Do you accept walk-in?" the <<person1>><<person>> asks, waiting for your response.
+    <br><br>
+    You look at the time and replied. "Sure, there is some time for you.. but do make an appointment next time."
+    <br><br>
+    The <<person>> raises <<his>> arms in a placating gesture. "Alright, alright. Lest not waste time on these trivial matters." <<He>> hands you the money. You make <<moneyGain 200>>.
+    <br><br>
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Random Sex]]>><<pass 60>><<set $sexstart to 1>><</link>>
+    <br>
+<</addinlineevent>>
+
+<<runeventpool>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Regulars
+<<effects>>
+
+You wait by the door.
+<<cleareventpool>>
+
+<<addinlineevent "room_work_regulars_1" 1>>
+    You heard the door knocking..
+    <br><br>
+    <<generate1>><<person1>>A <<person>> walks right by you, and looks around.
+    <br><br>
+    "Welcome to Room 211," you hoped and hugged the <<person>> as you speak. "You're right on time."
+    <br><br>
+    <<He>> opens <<his>> mouth to speak. "I've been missing your service sin-," you interrupt, as if predicting a question. <span class='lewd'>"Then let's not waste anytime."</span>
+    <br><br>
+    <<He>> pays you, and sits on the bed, readied. You've made <<moneyGain 400>>.
+    <br><br>
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Regulars Single Sex]]>><<pass 60>><<set $sexstart to 1>><</link>>
+    <br>
+<</addinlineevent>>
+
+<<addinlineevent "room_work_regulars_2" 1>>
+    You heard the door knocking..
+    <<generate1>><<generate2>><<person1>>
+    A <<person>> and <<person2>><<person>> enter.
+    <br><br>
+    "Welcome to Room 211," you say. "Are you going with the usu-"
+    <br><br>
+    "Nah," the <<person2>><<person>> says, handing you money for two customers. <span class='lewd'>"I'm feeling it today, can you do a dance for us?"</span>
+    <br><br>
+    You make <<moneyGain 800>>.
+
+    The pair sits on the sofa, eagerly awaiting..
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Regulars Pair Sex]]>><<pass 60>><<set $sexstart to 1>><</link>>
+    <br>
+<</addinlineevent>>
+
+<<addinlineevent "room_work_regulars_3" 1>>
+    You heard the door knocking..
+    <<generate1>><<generate2>><<generate3>><<person1>>
+    A <<person>>, <<person2>><<person>>, and <<person3>><<person>> enter, looking unsure.
+    <br><br>
+    "Welcome to Room-" you stop. "There's three peoples this time it seems.."
+    <br><br>
+    <span class='lewd'>"Yeah, please take good care of us~"</span> the <<person1>><<person>> says.
+    <br><br>
+    <<He>> hands you the money. You make <<moneyGain 1000>>.
+    <br><br>
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Regulars Trio Sex]]>><<pass 60>><<set $sexstart to 1>><</link>>
+    <br>
+<</addinlineevent>>
+
+<<runeventpool>>
+
+ 
+:: Sketchy Hotel Unoccupied Room Work Newbies Single Sex
+<<effects>>
+
+<<if $sexstart is 1>>
+	<<set $sexstart to 0>>
+	<<consensual>>
+	<<set $consensual to 1>>
+	<<neutral 1>>
+	<<maninit>>
+	<<set $enemyanger += 100>><<promiscuity3>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Single Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Single Sex]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Newbies Single Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	<<He>> waits for a moment after ejaculation. "Wow," <<he>> says. "Thanks for the good time."
+	<br><br>
+	<<tearful>> you show <<him>> the door.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+	<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+    <br>
+<<else>>
+	You push the <<person>> off. <<He>> looks at you angrily. "I thought you agree to this," <<he>> says. "This is the worst experience, ever."
+	<br><br>
+	The <<person>> go and shove the door behind him.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+	<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Newbies Pair Sex
+<<if $sexstart is 1>>
+	<<set $sexstart to 0>>
+	<<consensual>>
+	<<set $consensual to 1>>
+	<<neutral 1>>
+	<<maninit>>
+	<<set $enemyanger += 100>><<promiscuity3>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Pair Sex Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Pair Sex]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Newbies Pair Sex Finish
+<<set $outside to 0>><<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	The customers ejaculate all over the places. "Impressive," <<he>> says. "You really dried both of us up."
+	<br><br>
+	<<tearful>> you show both of them the door.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+	<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+    <br>
+<<else>>
+	You screamed, scarring both of them. They quickly dressed themself up and hurried out of the room.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+	<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+    <br>
+<</if>>
+
+
+
+:: Sketchy Hotel Unoccupied Room Work Newbies Random Sex
+<<effects>>
+
+<<if $sexstart is 1>>
+	<<set $sexstart to 0>>
+	<<consensual>>
+	<<set $consensual to 1>>
+	<<neutral 1>>
+	<<maninit>>
+	<<set $enemyanger += 100>><<promiscuity3>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Random Sex Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Newbies Random Sex]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Newbies Random Sex Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	"Splendid," <<he>> gets up. "Didn't know there's such a gem hidden in here." <<he>> complimented.
+	<br><br>
+	<<tearful>> you show <<him>> the door.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+	<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+    <br>
+<<else>>
+	You push the <<person>> off. <<He>> looks at you angrily. "I thought you agree to this," <<he>> says. "This is the worst experience, ever."
+	<br><br>
+	The <<person>> go and shove the door behind him.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+	<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Professional Grope Rape
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Professional Grope Rape Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Professional Grope Rape]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Professional Grope Rape Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	<<He>> waits for a moment, then pinches <<himself>>. "Ow," <<he>> says. "Sorry. I thought I was dreaming."
+	<br><br>
+	<<tearful>> you show <<him>> the door.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+	<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+    <br>
+
+<<else>>
+	You knock the <<person>> on <<his>> ass. <<He>> blinks. "Sorry," <<he>> says. "I thought I was dreaming."
+	<br><br>
+	<<tearful>> you show <<him>> the door.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+	<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+    <br>
+
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Professional Pair
+<<effects>>
+
+The <<person1>><<person>> and <<person2>><<person>> inhale hookah smoke, and lean back on their cushions. You observe them, making sure their movements don't become worrisome.
+<br><br>
+
+<<set $danger to random(1, 10000)>><<set $dangerevent to 0>>
+<<if ($danger gte (9900 - $allure) or $eventforced)>>
+    An hour passes. You wake your customers, only for the <<person1>><<person>> to snatch your wrist and pull you down.
+    <br><br>
+    "£50 each to smoke is a little dear, don't you think?" <<he>> says. "Let's get our money's worth."
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Professional Pair Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<<else>>
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Simple Good End]]>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Professional Pair Rape
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Professional Pair Rape Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Professional Pair Rape]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Professional Pair Rape Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	They leave you lying on the cushions, and depart.
+	<br><br>
+	<<tearful>> you rise to your feet.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+<<else>>
+	The <<person1>><<person>> staggers, grasping the hookah to steady <<himself>>. <<He>> jostles the vase, and a puff of concentrated smoke envelopes <<his>> face.
+	<br><br>
+    <<He>> staggers from the room, muttering nonsense. The <<person2>><<person>> follows, wearing a worried expression.
+    <br><br>
+	<<tearful>> you make sure the hookah doesn't fall.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+
+<</if>>
+
+<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Unoccupied Room Work Professional Trio
+<<effects>>
+
+Your customers inhale the smoke. It lulls them into an erratic slumber.
+<br><br>
+
+<<set $danger to random(1, 10000)>><<set $dangerevent to 0>>
+<<if ($danger gte (9900 - $allure) or $eventforced)>>
+    An hour passes. You wake them from their dreams. "Thank you for your custom," you say. "I'm afraid we only allow one hour on the hookah per day. For safety reasons."
+    <br><br>
+    You lead them to the door, but the <<person1>><<person>> slams it ahead of you. "The hookah's made me horny," <<he>> says. "How about you help me fix that?" The <<person2>><<person>> and <<person3>><<person>> step either side of you. They don't look ready to accept "no" as an answer.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Professional Trio Rape]]>><<set $molestationstart to 1>><</link>>
+    <br>
+<<else>>
+    <<link [[Next|Sketchy Hotel Unoccupied Room Work Simple Good End]]>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Professional Trio Rape
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Professional Trio Rape Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Unoccupied Room Work Professional Trio Rape]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Unoccupied Room Work Professional Trio Rape Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	They leave the parlour, leaving you slumped beside the door.
+	<br><br>
+	<<tearful>> you rise to your feet.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+
+<<else>>
+	You throw open the door, and give the <<person1>><<person>> a solid kick to the behind. <<He>> tumbles outside. The <<person2>><<person>> and <<person3>><<person>> decide that further aggression isn't worthwhile, and leave with what dignity they still possess.
+	<br><br>
+	<<tearful>> you slam the door after them.
+	<br><br>
+	<<clotheson>>
+	<<endcombat>>
+
+<</if>>
+
+<<link [[Next|Sketchy Hotel Unoccupied Room]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Unoccupied Room Work Simple Good End
+<<effects>>
+
+<<if $enemyno gte 2>>
+    You watch over your customers. They appear to sleep, but still bring the pipes to their mouths now and then.
+    <br><br>
+<<else>>
+    You watch over your customer. <<He>> appears to sleep, but still brings the pipe to <<his>> mouth now and then.
+    <br><br>
+<</if>>
+<<person1>>
+<<set $rng to random(1, 5)>>
+<<if $rng is 5>>
+    The <<person>> whispers now and then, describing <<his>> visions. Some of it makes a disturbing sense.<<if $awareness lt 600>><<awareness 6>><<gawareness>><</if>>
+    <br><br>
+<<elseif $rng is 4>>
+    The <<person>> murmurs about <<his>> work on Elk Street. It sounds interesting.<<gscience>><<scienceskill>>
+    <br><br>
+<<elseif $rng is 3>>
+    The <<person>> solves maths problems out loud. Most are beyond you, and perhaps the <<person>> <<himself>>, but you follow along with some.<<gmaths>><<mathsskill>>
+    <br><br>
+<<elseif $rng is 2>>
+    The <<person>> quotes poetry aloud. At least you assume <<he>>'s quoting. It's oddly inspiring.<<genglish>><<englishskill>>
+    <br><br>
+<<else>>
+    The <<person>> talks about <<his>> childhood. It's embellished, it must be, but it's still interesting.<<ghistory>><<historyskill>>
+    <br><br>
+<</if>>
+
+<<if $enemyno gte 2>>
+    At the end of the shift, you wake your customers and help them to their feet.
+    <br><br>
+<<else>>
+    At the end of the shift, you wake your customer and help <<him>> to <<his>> feet.
+    <br><br>
+<</if>>
+
+<<link [[Next|Sketchy Hotel Unoccupied Room]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Knock
+<<effects>>
+
+<<if $rooms_progress is 1 and random(1, 10) is 10>>
+    You approach one of the rooms, and raise your fist to knock. Then you notice the doorknob, <span class="purple">shaped like a lotus flower,</span> and remember the warning. Bad people reside here, apparently.
+    <br><br>
+    <<link [[Knock anyway|Sketchy Hotel Lotus]]>><<set $rooms_progress to 2>><</link>>
+    <br>
+    <<link [[Walk away|Sketchy Hotel]]>><</link>>
+    <br>
+<<else>>
+    <<cleareventpool>>
+
+    <<addinlineevent "rooms_vacant" 2>>
+        You approach one of the rooms, and knock on the door. There's no answer.
+        <br><br>
+
+        <<link [[Break in|Sketchy Hotel Lock]]>><</link>>
+        <br>
+        <<link [[Go to the next room (0:01)|Sketchy Hotel Knock]]>><<pass 1>><</link>>
+        <br>
+        <<link [[Stop|Sketchy Hotel]]>><</link>>
+        <br>
+    <</addinlineevent>>
+
+    <<addinlineevent "rooms work_1" 1>>
+        <<generate1>><<person1>>
+        You approach one of the rooms, and knock on the door. It swings open to reveal a <<person>>. <<He>> leans against the doorframe. "What a cute attendant," <<he>> says. "What can I do for you?"
+        <br><br>
+        <<link [[Tell the guest is cleaning service|Sketchy Hotel Lecherous Ask]]>><</link>>
+        <br>
+        <<link [[Say you've got the wrong room and leave|Sketchy Hotel]]>><<endevent>><</link>>
+        <br>
+    <</addinlineevent>>
+
+    <<addinlineevent "rooms work_2" 1>>
+        <<generate1>><<person1>>
+        You approach one of the rooms, and knock on the door. You're answered by a bark.
+        <br><br>
+        "Quiet down!" answers a <<personsimple>>. "Dumb mutt." The door swings open to reveal a <<person>>. Tattered upholstery litters the floor behind <<him>>. "What is it?"
+        <br><br>
+        <<link [[Tell the guest is cleaning service|Sketchy Hotel Dog Ask]]>><</link>>
+        <br>
+        <<link [[Say you've got the wrong room and leave|Sketchy Hotel]]>><<endevent>><</link>>
+        <br>
+    <</addinlineevent>>
+
+    <<addinlineevent "rooms work_3" 1>>
+        <<generate1>><<generate2>><<person1>>
+        You hear voices before you reach the door. You knock, and it opens, revealing a <<person>>.
+        <br><br>
+        "Who is it?" Calls a <<person2>><<persons>> voice from deeper within.
+        <br>
+        "Some <<girl>>," the <<person1>><<person>> replies.
+        <br><br>
+
+        <<link [[Tell the guest is cleaning service|Sketchy Hotel Pair Ask]]>><</link>>
+        <br>
+        <<link [[Say you've got the wrong room and leave|Sketchy Hotel]]>><<endevent>><</link>>
+        <br>
+    <</addinlineevent>>
+
+    <<runeventpool>>
+<</if>>
+
+
+:: Sketchy Hotel Front Desk Intro
+<<effects>>
+
+<<generate1>><<person1>>
+You approach the front desk. A <<person>> in a suit looks at you with an attentive smile.
+<br><br>
+
+<<His>> gaze flicks over your body once. "How can I be of your service?"
+<br><br>
+
+<<link [[Ask if there's any job available (1:00)|Sketchy Hotel Front Desk Intro 2]]>><<pass 60>><</link>>
+<br>
+<<link [[Say nothing|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Front Desk Intro 2
+<<effects>>
+
+"Ahh.." <<he>> says "We do short of cleaners. We got rid of the previous one due to reasons" , standing up as <<he>> speaks
+<br><br>
+"We'll need to assess you before hiring, please come this way. I'll be the one to assess", showing you to a room.
+<br><br>
+
+<<if $housekeeping gte 100>>
+    <<set $rooms_progress to 1>>
+    You enter the bathroom. It's quite clean already, but the bath is stained. There are several bottles on the shelf, along with a rag. The rag is almost clean as well. You turn the bottles, but find they're completely unmarked. You try to open the closest. The lid is stuck, but you use the rag for extra purchase, and manage to twist it off.
+    <br><br>
+    You pour the cleaning solution over the bath's surface, and dust the shelves and windowsill while you wait for the chemicals to work. You run the tap, and hose the enamel down with a shower attachment. The chemicals run clear, leaving a pearly white.
+    <br><br>
+    The <<person>> walks in as you finish up. <span class="green">"Not bad. You're hired."</span> <<He>> says. "We'll be paying you per room service, do work hard for it."
+    <br><br>
+    <i>You can now work as a cleaner in the hotel on Starfish Street.</i>
+    <br><br>
+<<else>>
+    You enter the bathroom. It's quite clean already, but the bath is stained. There are several bottles on the shelf, along with a rag. The rag is almost clean as well. You turn the bottles, but find they're completely unmarked. You try to open one, but the lid is stuck. You have more luck with the next, but you've no idea if it's what you need.
+    <br><br>
+    You pour it into the bath, wait for a few minutes, then run the tap. The water clears, but the stain remains. You try each bottle in turn, but nothing will remove it. You try rubbing the bath with the rag, but to no effect. There's only one bottle left.
+    <br><br>
+    You twist the lid with all your might. It comes loose, <span class="red">but with too much force.</span> The bottle jerks from your hand, and spills its contents into the bath. It's half empty by the time you get it upright.
+    <br><br>
+    The <<person>> stops you. "Enough," <<he>> says. "It appears you are not the one we're looking for.." <<he>> pauses, and inhales. "Unfortunately, you're not hired"
+    <br><br>
+    <span class="blue">You'll need at least an <span class="pink">F+</span> housekeeping skill to work as a cleaner at the hotel.</span>
+    <br><br>
+<</if>>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Lecherous
+<<effects>>
+
+You enter the room, and see the damage at once. The bed is in a worse shape. The door to the balcony is wedged open by several empty whisky bottles. Empty beer cans, pizza boxes, and other rubbish litter a table beyond. One of the bottles is broken. Shattered glass litters the floor.
+<br><br>
+
+"Hah, a wild night," the <<person>> says with pride. 
+<br><br>
+
+You sweep up the remains of broken glass, take the bottles to recycling, and throw away the trash.
+<<set $danger to random(1, 10000)>><<set $dangerevent to 0>>
+<<if ($danger gte (9900 - $allure) or $eventforced) and $eventskip is 0>>
+    The <<person>> walks onto the balcony as you wipe down the railing, and rests <<his>> arms either side of you. "Nice view from up here," <<he>> says, pushing <<his>> groin against your <<bottom>>.
+    <<if $NPCList[0].penissize gte 2>>
+        <span class="lewd">You feel <<his>> <<npcPenis>> through the fabric.</span>
+    <</if>>
+    <<gtrauma>><<trauma 6>><<gstress>><<stress 6>><<garousal>><<arousal 600>>
+    <br><br>
+    It is a nice view, you can see much of the town from here, from the docks to the forest. It's hard to appreciate right now however.
+    <br><br>
+
+    <<link [[Get angry|Sketchy Hotel Lecherous Angry]]>><<def 1>><<trauma -6>><<stress 6>><</link>><<gstress>><<ltrauma>>
+    <br>
+    <<link [[Endure|Sketchy Hotel Lecherous Endure]]>><<sub 1>><<trauma 6>><<arousal 600>><</link>><<gtrauma>><<garousal>>
+    <br>
+    <<if $promiscuity gte 15>>
+        <<link [[Charge extra|Sketchy Hotel Lecherous Rub]]>><</link>><<promiscuous2>>
+        <br>
+    <</if>>
+<<else>>
+    The balcony is spotless when you're done, far cleaner than it must have been before the party. The <<person>> walks out, and stretches.
+    <br><br>
+
+    "Much better," <<he>> says. "Thanks for your service." You make <<moneyGain 15>>.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Lecherous Angry
+<<effects>>
+
+<<if $speech_attitude is "meek">>
+    "Pl-please don't," you say. "Just let me work in peace."
+<<elseif $speech_attitude is "bratty">>
+    "Get away from me," you say. "Pervert."
+<<else>>
+    "Get away from me!" you say.
+<</if>>
+<br><br>
+
+<<if random(1, 2) is 2>>
+    "Forgot my manners," the <<person>> says, trailing a hand over your shoulder as <<he>> pulls away. "I apologise." <<He>> doesn't harass you again.
+    <br><br>
+    The balcony is spotless when you're done, far cleaner than it must have been before the party. The <<person>> walks out, and stretches.
+    <br><br>
+
+    "Much better," <<he>> says. "Thanks for your service." You make <<moneyGain 15>>.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+    <br>
+<<else>>
+    "Surely a smart <<girl>> like you knows how these things work," <<he>> says, reaching into <<his>> pocket. <<He>> waves another <span class="gold">£50</span> in front of your face. "You wanted money, right?"
+    <br><br>
+
+    <<link [[Endure|Sketchy Hotel Lecherous Endure]]>><<sub 1>><</link>>
+    <br>
+    <<link [[Stomp on foot|Sketchy Hotel Lecherous Stomp]]>><<def 1>><<famescrap 1>><<trauma -6>><<stress -6>><</link>><<ltrauma>><<lstress>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Lecherous Ask
+<<effects>>
+
+"Just in time, as a matter of fact," the <<person1>><<person>> says, making room for you to pass. "Have a wild night yesterday, and the bed is a mess."
+<br><br>
+
+<<link [[Accept (1:00)|Sketchy Hotel Lecherous]]>><<housekeeping 1 200>><</link>><<ghousekeeping 200>>
+<br>
+<<link [[Refuse|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Lecherous Endure
+<<effects>>
+
+You endure as the <<person>> rubs <<his>> groin against your <<bottom>>. "I love the view of the sea," <<he>> says, resting <<his>> hands on yours. "And the breeze." <<He>> trails a hand over your shoulder as <<he>> pulls away.
+<br><br>
+
+"Looks clean enough," <<he>> says. "Here's a little extra, for the trouble." You make <<moneyGain 20>>.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Lecherous Rub
+<<effects>>
+
+You rest your hands on <<his>>, and push your <<bottom>> into <<his>> crotch. "This sort of cleaning is extra," you say. "<span class="gold">£20</span> extra."
+<<promiscuity2>>
+
+"S-sounds good to me," <<he>> says.
+
+<<if $NPCList[0].penis isnot "none">>
+    You feel <<his>> <<print $NPCList[0].penisdesc>> harden through <<his>> <<print $NPCList[0].clothes.lower.name>>. You line it up between your cheeks, and rub against it, arching your back as you do. <<He>> humps back, matching your rhythm, until <<he>> shudders into orgasm.
+<<else>>
+    You rub against <<his>> pussy through <<his>> <<print $NPCList[0].clothes.lower.name>>, arching your back as you do. <<He>> humps back, matching your rhythm, until <<he>> shudders into orgasm.
+<</if>>
+<br><br>
+
+<<He>> slumps onto a chair. You reach into <<his>> pocket, and help yourself to <<moneyGain 30>> before leaving the room.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Lecherous Stomp
+<<effects>>
+
+You stomp on the <<persons>> foot. <<He>> recoils with a yelp. "F-fucking crazy!" <<he>> stammers, hopping away. "Get the fuck out of my room."
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Lock
+<<effects>><<set $lock to 200>>
+
+The door is locked tight.
+<br><br>
+<<if currentSkillValue('skulduggery') gte $lock>>
+	<span class="green">The lock looks easy to pick.</span>
+	<br><br>
+	<<link [[Break in (0:05)|Sketchy Hotel Sneak]]>><<pass 5>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+	<br>
+<<else>>
+	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>>
+	<br><br>
+<</if>>
+
+<<link [[Leave|Sketchy Hotel]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Lotus
+<<effects>>
+
+<<npc "Bailey">><<person1>><<generate2>>
+The lotus rattles as you knock. Footsteps thud closer, and the door swings open. A figure stands there, an unlit cigarette in <<his>> mouth. You recognise <<him>> from the orphanage. <<He>> recognises you as well. <span class="pink">It's Bailey.</span>
+<br><br>
+<<He>> regards you with a level stare. "I can tell from your dumb expression," <<he>> says. "You weren't expecting me. Good. Don't bother me here again." <<He>> slams the door.
+<br><br>
+<<link [[Next|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Pair
+<<effects>>
+
+You enter the living room. There's another <<person2>><<person>> inside. <<He>> waves, but doesn't look at you as you enter, busy on <<his>> phone.
+<br><br>
+
+"Do whatever you need to do," the <<person1>><<person>> says. "And don't disturb us." <<He>> went away.
+<br><br>
+
+You can't use a vacuum cleaner as the noise would disturb them, so you take a dustpan and brush for cleaning.
+<br><br>
+
+<<link [[Next|Sketchy Hotel Pair 2]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Pair 2
+<<effects>>
+
+The <<person1>><<person>> and <<person2>><<person>> are busying at their stuff as you work, one busy with <<his>> phone while other with <<his>> laptop. You finish the room, and move on to the toilet.
+<br><br>
+
+<<set $danger to random(1, 10000)>><<set $dangerevent to 0>>
+<<if ($danger gte (9900 - $allure) or $eventforced) and $eventskip is 0>>
+    You  hit the shelf accidentally and the vase fell off, leaving a loud noise and a mess on the ground.
+    <br>
+    "FUCK," the <<person1>><<person>> replies. "Told you we shouldn't come to this hotel."
+    <br>
+    The <<person1>><<person>> looks at you unhappy.
+    <br>
+    "Now, now, don't be so mad.. We don't really have a choice." The <<person2>><<person>> says. "Do careful <<girl>>. I'll give you an extra <span class="gold">£5</span> if you sped up the cleaning."
+    <br><br>
+    The <<person1>><<person>> paces up and down the room, furious.
+    <br><br>
+
+    <<link [[Agree|Sketchy Hotel Pair 3]]>><</link>>
+    <br>
+    <<link [[Refuse|Sketchy Hotel Pair 2 Refuse]]>><</link>>
+    <br>
+<<else>>
+    You finish cleaning, and turn to find them occupied. The <<person2>><<person>> hands you the money while on his phone. You receive <<moneyGain 5>> of tips.
+    <br><br>
+
+    <<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+    <br>
+<</if>>
+
+
+:: Sketchy Hotel Pair 2 Refuse
+<<effects>>
+
+"Alright, sorry for my friend's behaviour. It must've scare you." the <<person2>><<person>> says. "I'll ask the front desk to send another person, thanks for your hardwork." You make <<moneyGain 15>>.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Pair 3
+<<effects>>
+
+You drop to all fours to retrieve the pieces. Many have bounced beneath the furniture.
+<br><br>
+
+The <<person1>><<person>> grabs your hair, and turns your head to face <<him>> angrily. <<gtrauma>><<gstress>><<gpain>><<trauma 6>><<stress 6>><<pain 4>>
+<br>
+"STOP, we do not need more troubles" the <<person2>><<person>> interjects.
+<br>
+"I know what will cheer me up," the <<person1>><<person>> says, leering at your body.
+<br>
+The <<person2>><<person>> sighs. "I'll throw an extra <span class="gold">£50</span> in if you let my friend vent."
+<br><br>
+
+<<if $promiscuity gte 35>>
+    <<link [[Agree|Sketchy Hotel Pair Agree]]>><</link>><<promiscuous3>>
+    <br>
+    <<link [[Ask for £100|Sketchy Hotel Pair Seduce]]>><</link>><<promiscuous3>>
+    <br>
+<<elseif $uncomfortable.prostituting is false>>
+    <<His>> offer repulses you, but you need the money.
+    <br><br>
+     <<link [[Agree|Sketchy Hotel Pair Agree]]>><<set $desperateaction to 1>><</link>><<promiscuous3>>
+    <br>
+    <<link [[Ask for £100|Sketchy Hotel Pair Seduce]]>><<set $desperateaction to 1>><</link>><<promiscuous3>>
+    <br>
+<</if>>
+<<link [[Refuse|Sketchy Hotel Pair 3 Refuse]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Pair 3 Refuse
+<<effects>>
+
+"Alright," the <<person2>><<person>> sighs. "Get your mitts off the <<girl>>." The <<person1>><<person>> releases you while the <<person2>><<person>> fishes money from <<his>> pocket. "Here's an extra <span class="gold">£5</span> for your trouble" You make <<moneyGain 20>>.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<pass 60>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Pair Agree
+<<effects>>
+
+"I'll be leaving you to it, then," the <<person2>><<person>> says. "I'll leave the money by the door."
+<br><br>
+<<saveNPC 0 "rooms_5">>
+<<endevent phaseless>>
+<<loadNPC 0 "rooms_5">>
+<<clearNPC "rooms_5">>
+<<person1>>
+The <<person>> shove you into the bed and delivers a hard smack to your <<bottom>>.
+<br><br>
+
+<<link [[Next|Sketchy Hotel Pair Sex]]>><<set $sexstart to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Pair Ask
+<<effects>>
+
+"I don't think we need anything," the <<person1>><<person>> says.
+<br><br>
+"No, the cleaning service is a must I'm afraid.." another staff walks by and says. "The room is overdue for cleaning. And the manager wouldn't be happy with it" with a threatening tone.
+<br><br>
+The <<person1>><<person>> looks ready to argue, but relents. "Fine." <<He>> turns to you. "Just do your stuff and fuck off."
+<br><br>
+
+<<link [[Accept (1:00)|Sketchy Hotel Pair]]>><<housekeeping 1 200>><</link>><<ghousekeeping 200>>
+<br>
+<<link [[Refuse|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Pair Seduce
+<<effects>>
+
+<<set $seductiondifficulty to 8000>>
+<<seductioncheck>>
+<br><br>
+<<if $seductionskill lt 1000>>
+	<span class="gold">You feel more confident in your powers of seduction.</span>
+	<br><br>
+<</if>>
+<<seductionskilluse>>
+
+<<if $speech_attitude is "meek">>
+    "I-I'll do it for £100," you say. "This <<personsimple>> is too scary for less."
+<<elseif $speech_attitude is "bratty">>
+    "I'm not letting this loser go any further for less than £100," you say.
+<<else>>
+    "I'll do it," you say. "But it'll cost £100."
+<</if>>
+<<promiscuity3>>
+
+<<if $seductionrating gte $seductionrequired>>
+    <<set $phase to 1>>
+
+	The <<person1>><<person>> seems eager. The <<person2>><<person>> looks ready to rebuke you, but then sighs and shakes <<his>> head. "Fine. <span class="green">£100 it is.</span>"
+	<br><br>
+
+    <<link [[Next|Sketchy Hotel Pair Agree]]>><<set $phase to 1>><</link>>
+    <br>
+
+<<else>>
+
+	The <<person1>><<person>> seems eager, <span class="red">but the <<person2>><<person>> shakes <<his>> head.</span> "It'll be cheaper to ask for others at that point. £50, take it or leave it."
+	<br><br>
+
+    <<link [[Take it|Sketchy Hotel Pair Agree]]>><</link>>
+    <br>
+    <<link [[Leave it|Sketchy Hotel Pair 3 Refuse]]>><</link>>
+    <br>
+
+<</if>>
+
+
+:: Sketchy Hotel Pair Sex
+<<if $sexstart is 1>>
+	<<set $sexstart to 0>>
+	<<consensual>>
+	<<set $consensual to 1>>
+	<<neutral 1>>
+	<<maninit>>
+	<<set $enemyanger += 100>><<promiscuity3>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Pair Sex Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Pair Sex]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Pair Sex Finish
+<<set $outside to 0>><<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	"I think I'm ready to forgive you," the <<person>> says. "Take your money and get out."
+	<br><br>
+	<<tearful>> you leave the room. You find the money the <<person>>'s friend left on a table by the front door.
+    You make
+    <<if $phase is 1>>
+        <<moneyGain 120>>.
+    <<else>>
+        <<moneyGain 70>>.
+    <</if>>
+<<elseif $enemyhealth lte 0>>
+	The <<person>> stumbles backwards, treading on the broken pieces and falling to the floor.
+	<br><br>
+	<<tearful>> you flee the room. You swipe the cash from a table by the front door.
+    You make
+    <<if $phase is 1>>
+        <<moneyGain 120>>.
+    <<else>>
+        <<moneyGain 70>>.
+    <</if>>
+<<else>>
+    The <<person1>><<person>> accompanies you to the door, pushes some cash into your hands, then shoves you outside.
+    <br><br>
+    You make <<moneyGain 70>>
+<</if>>
+<br><br>
+
+
+<<clotheson>>
+<<endcombat>>
+
+<<link [[Next|Sketchy Hotel]]>><<pass 60>><</link>>
+<br>
+
+
+:: Sketchy Hotel Sneak
+<<effects>>
+
+You successfully pick the lock and enter the abode.
+<<if $skulduggery lt 300>>
+	<<skulduggeryskilluse>>
+<<else>>
+	<span class="blue">There's nothing more you can learn from locks this simple.</span>
+<</if>>
+<br><br>
+
+<<cleareventpool>>
+
+<<addinlineevent "rooms_sneak_1" 1>>
+    The interior is lit by a soft, pink light. Pornographic photographs decorate the walls, and the sofa has an odd curvature. It looks like a valuable antique, but it's too big to carry.
+	<br><br>
+	<<set _blackmoney to 0>>
+	<<set _rng to random(1, 5)>>
+	<<switch _rng>>
+		<<case 1>>
+			There's a vintage magazine on the floor however. It might be worth something on the black market.<<set _blackmoney += 10>>
+		<<case 2>>
+			There's £20 in foreign cash lying on the table beside it however. It might be worth something on the black market.<<set _blackmoney += 20>>
+		<<case 3>>
+			There's a pearl necklace lying on the table beside it however. It might be worth something on the black market.<<set _blackmoney += 30>>
+		<<case 4>>
+			A pair of gold cufflinks sit on the table beside it however. It might be worth something on the black market.<<set _blackmoney += 40>>
+		<<default>>
+			There's a vintage ring on a table beside it however. It has a strange honeycomb shape, but it's made of real gold. It might be worth something on the black market.<<set _blackmoney += 80>>
+	<</switch>>
+	<br><br>
+
+	<<link [[Take it|Sketchy Hotel]]>><<set $blackmoney += _blackmoney>><<crimeUp _blackmoney "thievery">><</link>><<crime "thievery">>
+	<br>
+	<<link [[Leave|Sketchy Hotel]]>><</link>>
+	<br>
+<</addinlineevent>>
+
+<<addinlineevent "rooms_sneak_2" 1>>
+	<<npcClothesType $NPCList[0] "worker">>
+	<<generate1>><<person1>><<npcClothesType $NPCList[0] "bathrobe">>
+	You hear running water. Someone's in the shower. There's nothing unusual about the room, but you can't find any valuables, until you come across a safe hidden in the bedroom. It has an old-fashioned locking mechanism you should be able to crack, but it might take a bit of time.
+	<br><br>
+	You hear a <<personsimple>>'s voice, singing in the shower.
+	<br><br>
+
+	<<set $skulduggerydifficulty to 400>>
+	<<link [[Crack|Sketchy Hotel Sneak Crack]]>><</link>><<skulduggerydifficulty>>
+	<br>
+	<<link [[Leave|Sketchy Hotel]]>><<endevent>><</link>>
+	<br>
+<</addinlineevent>>
+
+<<addinlineevent "rooms_sneak_3" 1>>
+	A wind blows in from an open door, leading to a terrace. There's no one around, but you're not sure how long that'll last.
+	<br><br>
+
+	<<if $rooms_vents_init is undefined>>
+		You investigate the terrace. A neighbouring terrace is close enough to climb to. You're not sure how that room is meant to be accessed normally, as there were no doors on that side.
+		<br><br>
+		<<link [[Cross the gap to the other terrace|Sketchy Hotel Sneak Terrace]]>><</link>><<willpowerdifficulty 1 400>>
+		<br>
+		<<link [[Investigate this room|Sketchy Hotel Sneak Investigate]]>><</link>>
+		<br>
+	<<else>>
+		You search the room for any valuables, and find <span class="gold">£30</span> under the mattress.
+		<br><br>
+
+		<<link [[Take it|Sketchy Hotel]]>><<moneyGain 30>><<crimeUp 30 "petty">><</link>><<crime "petty">>
+		<br>
+		<<link [[Leave it|Sketchy Hotel]]>><</link>>
+		<br>
+	<</if>>
+<</addinlineevent>>
+
+<<addinlineevent "rooms_sneak_4" 1>>
+	<<generate1>><<person1>>
+	You close the door behind you. Thick curtains have been drawn over the windows, leaving the room dark. You fumble for the light switch. It illuminates the room, and reveals a <<person>> sat in a chair, a cat on <<his>> lap. <<He>>'s staring right at you.
+	<br><br>
+
+	"I wasn't expecting a guest," <<he>> says. "Much less an intruder. What do you have to say for yourself?" You can't help but notice <<his>> expensive watch. You avoid looking right at it.
+	<br><br>
+
+	<<if $promiscuity gte 15>>
+		<<link [[Seduce|Sketchy Hotel Sneak Seduce]]>><</link>><<promiscuous2>>
+		<br>
+	<</if>>
+	<<link [[Attack|Sketchy Hotel Sneak Attack]]>><</link>>
+	<br>
+	<<link [[Run|Sketchy Hotel Sneak Run]]>><</link>>
+	<br>
+<</addinlineevent>>
+
+<<if crimeSumCurrent() gte 500>>
+	<<addinlineevent "rooms_sneak_5" 0.2>>
+		An acrid scent lingers in the air, but the room appears otherwise normal. Two steps in, however, and a metal shutter slams across the door behind you. An alarm blares.
+		<br><br>
+
+		"POLICE NOTIFIED," announces a robotic voice. "ESTIMATED TIME OF ARRIVAL: FIVE MINUTES. PLEASE STAND BY."
+		<br><br>
+
+		The windows aren't shuttered, but you're many stories up. A rope would take at least a few minutes to make.
+		<br><br>
+
+		<<set $rooms_alarm_fabric to 0>>
+		<<set $rooms_alarm_time to 5>>
+
+		<<rooms_alarm_links>>
+
+	<</addinlineevent>>
+<</if>>
+
+<<addinlineevent "rooms_sneak_6" 1>>
+	<<generate1>><<person1>>
+	A <<person>> snores on the sofa. You tiptoe by, searching for loot. You find a box of jewellery in the bedroom. Nothing spectacular, but it might be worth something on the black market.
+	<br><br>
+
+	<<link [[Take it|Sketchy Hotel Sneak Snore]]>><<set $blackmoney += 30>><<crimeUp 30 "thievery">><</link>><<crime "thievery">>
+	<br>
+	<<link [[Leave|Sketchy Hotel]]>><<endevent>><</link>>
+	<br>
+<</addinlineevent>>
+
+<<addinlineevent "rooms_sneak_7" 1>>
+	<<generate1>><<person1>>
+	The smell of takeout greets you. A <<person>> stands in the toilet, talking on a phone and looking out the window.
+	<br><br>
+
+	<<His>> <<wallet>> sits on the table not far from <<him>>. There's <span class="gold">£40</span> inside.
+	<br><br>
+
+	<<link [[Take it|Sketchy Hotel Sneak Wallet]]>><<moneyGain 40>><<crimeUp 40 "petty">><</link>><<crime "petty">>
+	<br>
+	<<link [[Leave|Sketchy Hotel]]>><<endevent>><</link>>
+	<br>
+<</addinlineevent>>
+
+<<addinlineevent "rooms_sneak_8" 1>>
+	There's an antique gun on the wall, but it's affixed too firmly to take with you. You rummage around, and find <span class="gold">£20</span> in a drawer.
+	<br><br>
+
+	<<link [[Take it|Sketchy Hotel]]>><<moneyGain 20>><<crimeUp 20 "petty">><</link>><<crime "petty">>
+	<br>
+	<<link [[Leave|Sketchy Hotel]]>><<endevent>><</link>>
+	<br>
+<</addinlineevent>>
+
+<<addinlineevent "rooms_sneak_9" 1>>
+	A lava lamp glows in the corner, illuminating old-fashioned decor with a soft glow. There's little of value that you can carry however, though you do find some jewellery hidden in a shoebox.
+	<br><br>
+
+	<<link [[Take it|Sketchy Hotel]]>><<set $blackmoney += 30>><<crimeUp 30 "petty">><</link>><<crime "petty">>
+	<br>
+	<<link [[Leave|Sketchy Hotel]]>><</link>>
+	<br>
+<</addinlineevent>>
+
+<<addinlineevent "rooms_sneak_10" 1>>
+	It's empty. Even the lights and switches are missing, letting their cables dangle. You'll have to try somewhere else.
+	<br><br>
+	<<link [[Leave|Sketchy Hotel]]>><<endevent>><</link>>
+	<br>
+<</addinlineevent>>
+
+<<runeventpool>>
+
+
+:: Sketchy Hotel Sneak Attack
+<<effects>>
+
+You don't wait for the <<person1>><<person>> to make the first move. You run at <<him>>, barely giving <<him>> time to stand. The cat leaps away from you.
+<br><br>
+
+<<link [[Next|Sketchy Hotel Sneak Rape 2]]>><<set $molestationstart to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Sneak Crack
+<<effects>>
+
+You press your ear against the safe, and listen for telltale clicks as you turn the dial.
+<br><br>
+
+<<skulduggerycheck>>
+<<if $skulduggerysuccess is 1>>
+
+	<span class="green">The safe opens,</span> yielding its contents. You find <span class="gold">£120</span> inside.
+	<br><br>
+
+	<<if $skulduggery lte ($skulduggerydifficulty + 100)>>
+		<<skulduggeryskilluse>>
+	<<else>>
+		<span class="blue">That was too easy. You didn't learn anything.</span>
+		<br><br>
+	<</if>>
+
+	<<link [[Take it|Sketchy Hotel]]>><<moneyGain 120>><<crimeUp 120 "thievery">><<endevent>><</link>><<crime "thievery">>
+	<br>
+	<<link [[Leave|Sketchy Hotel]]>><<endevent>><</link>>
+	<br>
+
+<<else>>
+
+	<span class="red">You hear the running water stop.</span> Before you can escape the bedroom, a <<person>> erupts from the bathroom, wearing just a bathrobe, and still dripping.
+	<br><br>
+
+	"Steal from me would you?" <<he>> says. "Time for a lesson."
+	<br><br>
+
+	<<if $skulduggery lte ($skulduggerydifficulty + 100)>>
+		<<skulduggeryskilluse>>
+	<<else>>
+		<span class="blue">That was too easy. You didn't learn anything.</span>
+		<br><br>
+	<</if>>
+
+	<<link [[Next|Sketchy Hotel Sneak Rape]]>><<set $molestationstart to 1>><</link>>
+	<br>
+
+<</if>>
+
+
+:: Sketchy Hotel Sneak Investigate
+<<effects>>
+
+You search the room for any valuables, and find <span class="gold">£30</span> under the mattress.
+<br><br>
+
+<<link [[Take it|Sketchy Hotel]]>><<moneyGain 30>><<crimeUp 30 "petty">><</link>><<crime "petty">>
+<br>
+<<link [[Leave it|Sketchy Hotel]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Sneak Rape
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Sneak Rape Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Sneak Rape]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Sneak Rape 2
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+	<<set $enemyanger += 100>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Sneak Rape 2 Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Sneak Rape 2]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Sneak Rape 2 Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	<<He>> opens the door, and shoves you out.
+	<br><br>
+	<<tearful>> you climb to your feet.
+	<br><br>
+<<elseif $enemyhealth lte 0>>
+	You shove the <<person1>><<person>> away, and grasp the watch as <<he>> falls. The force rips it off <<his>> wrist.<<set $blackmoney += 80>><<crimeUp 80 "thievery">><<crimeUp 20 "assault">><<crimes "assault" "thievery">>
+	<br><br>
+	<<tearful>> you escape the room.
+	<br><br>
+<</if>>
+<<clotheson>>
+<<endcombat>>
+
+<<link [[Next|Sketchy Hotel]]>><</link>>
+
+
+:: Sketchy Hotel Sneak Rape 3
+<<if $molestationstart is 1>>
+	<<set $molestationstart to 0>>
+	<<controlloss>>
+	<<violence 1>>
+	<<neutral 1>>
+	<<molested>>
+	<<maninit>>
+	<<set $enemyanger to 40>><<set $enemytrust to -50>>
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<alarmstate>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Sneak Rape 3 Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Sneak Rape 3]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Sneak Rape 3 Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	<<He>> shoves you from the room.
+	<br><br>
+	<<tearful>> you climb to your feet.
+	<br><br>
+<<else>>
+	The <<person1>><<person>> runs, and hides in the bedroom.
+	<br><br>
+	<<tearful>> you escape the room.
+	<br><br>
+<</if>>
+<<endcombat>>
+
+<<clotheson>>
+<<endcombat>>
+
+<<link [[Next|Sketchy Hotel]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Sneak Rape Finish
+<<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	"I needed that," <<he>> says, shoving you towards the door. "Now get out."
+	<br><br>
+	<<tearful>> you hear the door slam behind you.
+	<br><br>
+<<elseif $enemyhealth lte 0>>
+	The <<person>> trips on <<his>> gown, and tumbles to the bathroom floor.
+	<br><br>
+	<<tearful>> you escape the room.
+	<br><br>
+<</if>>
+<<endcombat>>
+
+<<clotheson>>
+<<endcombat>>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Sneak Run
+<<effects>>
+
+You try to open the front door, but the <<person>> leaps to <<his>> feet and rushes towards you, throwing the cat several feet.
+<br><br>
+
+<<link [[Next|Sketchy Hotel Sneak Rape 2]]>><<set $molestationstart to 1>><</link>>
+<br>
+
+
+:: Sketchy Hotel Sneak Seduce
+<<effects>>
+
+<<set $seductiondifficulty to 6000>>
+<<seductioncheck>>
+<br><br>
+<<if $seductionskill lt 1000>>
+	<span class="gold">You feel more confident in your powers of seduction.</span>
+	<br><br>
+<</if>>
+<<seductionskilluse>>
+
+<<if $speech_attitude is "meek">>
+	"S-sorry for the intrusion," you say. "Someone paid me to provide them company. I must have the wrong address."
+<<elseif $speech_attitude is "bratty">>
+	"Wrong room?" you ask. "Good thing you told me. I'm an escort, you see. And already paid up too."
+<<else>>
+	"I must have the wrong room," you say. "I'm an escort, and I've been paid to provide entertainment."
+<</if>>
+You turn to leave.
+<<promiscuity2>>
+
+<<if $seductionrating gte $seductionrequired>>
+
+	<span class="green">"Wait,"</span> the person says at once, letting the cat leap to the floor. "I was jesting. Of course I'm who you're here for."
+	<br><br>
+
+	You walk over to <<him>>, without glancing at the watch.
+	<br><br>
+
+	<<link [[Next|Sketchy Hotel Sneak Sex]]>><<set $sexstart to 1>><</link>>
+	<br>
+
+<<else>>
+
+	<span class="red">"Nice try,"</span> the <<person>> says, standing and letting the cat leap to the floor. "But as you're here, why don't I take advantage?"
+	<br><br>
+
+	<<link [[Next|Sketchy Hotel Sneak Rape]]>><<set $molestationstart to 1>><</link>>
+	<br>
+
+<</if>>
+
+
+:: Sketchy Hotel Sneak Sex
+<<if $sexstart is 1>>
+	<<set $sexstart to 0>>
+	<<consensual>>
+	<<set $consensual to 1>>
+	<<neutral 1>>
+	<<maninit>>
+
+<</if>>
+
+<<effects>>
+<<effectsman>>
+<<man>>
+<<stateman>>
+<br><br>
+<<actionsman>>
+<<if _combatend>>
+	<span id="next"><<link [[Next|Sketchy Hotel Sneak Sex Finish]]>><</link>></span><<nexttext>>
+<<else>>
+	<span id="next"><<link [[Next|Sketchy Hotel Sneak Sex]]>><</link>></span><<nexttext>>
+<</if>>
+
+
+:: Sketchy Hotel Sneak Sex Finish
+<<set $outside to 0>><<effects>>
+<<if $enemyarousal gte $enemyarousalmax>>
+	<<ejaculation>>
+	You run your fingers down <<his>> arms as <<he>> spasms, slipping off the watch and squirrelling it away. <<He>> doesn't notice.<<set $blackmoney += 80>><<crimeUp 80 "thievery">><<crime "thievery">>
+	<br><br>
+	<<tearful>> you leave <<him>> slumped on the chair.
+	<br><br>
+<<elseif $enemyhealth lte 0>>
+	You shove the <<person1>><<person>> away, and grasp the watch as <<he>> falls. The force rips it off <<his>> wrist.<<set $blackmoney += 80>><<crimeUp 80 "thievery">><<crimeUp 20 "assault">><<crimes "assault" "thievery">>
+	<br><br>
+	<<tearful>> you escape the room.
+	<br><br>
+<<else>>
+	"Some whore you are," the <<person1>><<person>> scoffs. "Get out."
+	<br><br>
+	<<tearful>> you leave the room.
+	<br><br>
+<</if>>
+
+<<clotheson>>
+<<endcombat>>
+
+<<link [[Next|Sketchy Hotel]]>><</link>>
+
+
+:: Sketchy Hotel Sneak Snore
+<<effects>>
+
+<<if random(1, 2) is 2>>
+	You seize the goods, and tiptoe from the room without issue.
+	<br><br>
+
+	<<link [[Next|Sketchy Hotel]]>><<endevent>><</link>>
+	<br>
+<<else>>
+	You seize the goods, but the <<person>> wakes as you try to tiptoe by.
+	<br><br>
+
+	"I don't know what you're up to," <<he>> says, reaching out and grasping your thigh. "But you're in trouble now."
+	<br><br>
+
+	<<link [[Next|Sketchy Hotel Sneak Rape 3]]>><<set $molestationstart to 1>><</link>>
+	<br>
+<</if>>
+
+
+:: Sketchy Hotel Sneak Terrace
+<<effects>>
+
+<<if $willpowerSuccess>>
+	It's not a wide gap, but crossing it over such a drop is still scary. You resist looking down, <span class="green">and make it across.</span>
+	<br><br>
+	The terrace door to this room is closed, but unlocked. There's no front door, other than the one you used, and there's only one room. There is a ladder however, leading to a ventilation shaft in the ceiling.
+	<br><br>
+	Two stacks of computer servers are the only furniture, aside from a stool. They sit behind screens of glass, blinking with blue lights.
+	<br><br>
+	<<link [[Next|Sketchy Hotel Sneak Terrace 2]]>><</link>>
+	<br>
+<<else>>
+	You look down, at the pavement far below. Was the gap always this wide? You put one foot on the railing, <span class="red">and a sudden terror grips you.</span> You flee the room.<<gstress>><<stress 6>><<gwillpower>><<willpower 1>>
+	<br><br>
+
+	<<link [[Next|Sketchy Hotel]]>><</link>>
+	<br>
+<</if>>
+
+
+:: Sketchy Hotel Sneak Terrace 2
+<<effects>>
+
+You climb the ladder, and look up and down a vent. It's wide enough for you to squeeze through. One direction leads to a dead-end, but the other slopes down, and disappears around a bend. It's wide enough to squeeze through.
+<br><br>
+
+<<link [[Explore (0:10)|Sketchy Hotel Sneak Terrace Explore]]>><<pass 10>><</link>>
+<br>
+<<link [[Leave|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Sneak Terrace Explore
+<<effects>>
+<<set $rooms_vents_init to 1>>
+You crawl through the vents. They turn this way and that, passing above rooms and letting you peek inside through thin slits. Some are occupied, but you pass by unbeknownst.
+<br><br>
+
+There are no other entrances however, until you at last arrive at the bottom of a laundry room. You crawl from the vent, and peek outside. It's a normal corridor. You soon get your bearings.
+<br><br>
+
+
+<<link [[Next|Sketchy Hotel]]>><</link>>
+<br>
+
+
+:: Sketchy Hotel Sneak Wallet
+<<effects>>
+
+The <<person>> turns as you swipe the <<wallet>> from the table. <<He>> jumps in fright, almost dropping the phone, then furiously dials a number. You turn and run.
+<br><br>
+"Police!" the <<person>> says behind you. "I'm being robbed!"
+<br><br>
+You escape the room while the occupant shouts into <<his>> phone.
+<br><br>
+
+<<link [[Next|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Manager
+<<effects>>
+
+<<loadNPC 0 "rooms_manager">><<person1>>
+You enter the manager's office,
+<<if $rooms_manager is 2>>
+    <<set $rooms_manager to 3>>
+    and find the room empty. A cup lies on its side, tea spilled over the desk. A coat lies on the floor. A faint incense lingers in the air.
+    <br><br>
+<<else>>
+    and find <<him>> sat at <<his>> desk. <<He>> looks up.
+    <br><br>
+    "Ahh, looks who's back"
+    <br><br>
+<</if>>
+
+<<link [[Leave|Sketchy Hotel]]>><<endevent>><</link>>
+<br>
+
+
+:: Sketchy Hotel Manager Intro
+<<effects>>
+
+<<if $phase is 1>>
+    You shake the <<person>>'s hand.
+<<else>>
+    You keep your hands at your side. The <<person>> takes it in stride.
+<</if>>
+<br><br>
+
+"Say, why a student like you doing in a place like this?" <<he>> says. "But who am I to ask, you must have your reason.. Have a seat if you don't mind." <<He>>'s hinting at the chair by the desk.
+<br><br>
+"Straight to the point, I have an proposal for you." <<he>> controlled the computer in the room "It's going to be worth your while," the <<person>> proceed to show you footages from <<his>> computer. These footages shows you committing various mischievous acts within the hotel.
+<br><br>
+
+You're shock because you didn't recall there's any camera nearby. "I.."
+<br><br>
+
+The <<person>> stops you. "You're making my customer unhappy," with a polite smile on <<his>> face "I'm going to offer you a job, you know.. to make up for the losses"
+<br><br>
+The <<person>> stand up and walk towards you "Just keep doing what you're doing now." the <<person>> still have the polite smile on <<his>> face <span class='lewd'>"I've been enjoying these random events so far, no one has ever provided such a feast to my eyes"</span>
+<br><br>
+<span class='red'>You're visibly confused.</span> 
+<br><br>
+
+<<link [[Agree|Sketchy Hotel Manager Nod]]>><<set $service_response to 1>><</link>>
+<br>
+<<link [[Don't agree|Sketchy Hotel Manager Nod]]>><<set $service_response to 0>><</link>>
+<br>
+
+
+:: Sketchy Hotel Manager Nod
+<<effects>>
+
+<<if $service_response is 1>>
+    "Splendid," the <<person1>><<person>> says. "you already know the drill."
+    <br><br>
+    "Also, a suggestion" the <<person1>><<person>> eyeing you up and down.
+    "It would be best if you wear the maid dress to your services." the <<person1>><<person>> smile politely. "Anyway, looking forward to the surprise you'll bring. Now, the door is that way."
+    <br><br>
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><</link>>
+<<else>>
+    "Shame, you leave me no choice," the <<person1>><<person>> says and proceed to reach his pocket. Taking out a vial with suspicious content.
+    "This will be your punishment" says the <<person1>><<person>> 
+    <br><br>
+    You felt your arms and legs being tied all of a sudden and the <<person1>><<person>> is walking towards you with vial in <<his>> hand. You struggle but to no avail.
+    <br><br>
+    <<if $parasite.left_ear.name is undefined>>
+        <span class='lewd'>It squirms into your left ear,</span> leaving no trace.
+        <<parasite left_ear slime>>
+    <<elseif $parasite.right_ear.name is undefined>>
+        <span class='lewd'>It squirms into your right ear,</span> leaving no trace.
+        <<parasite right_ear slime>>
+    <</if>>
+    <br><br>
+    <<tearful>> you rise to your feet. You feel unnaturally aroused, despite your orgasm. It's a small feeling at first. Then it grows, until <span class='lewd'>an overwhelming desire for lewdity overtakes you.</span>
+    <br><br>
+    <<if !$earSlime.corruption>>
+        <i>A corruption bar has appeared in the Characteristics tab.</i>
+        <br><br>
+    <</if>>
+    "Feel free to come again." the <<person1>><<person>> says. "I had a feeling you would." while looking at an empty vial in his hand.
+    <br><br>
+    <<link [[Next|Sketchy Hotel]]>><<endevent>><</link>>
+<</if>>
+<br><br>
+
+
+:: Sketchy Hotel
+<<set $outside to 0>><<location "sketchy_hotel">><<effects>>
+
+You are at the lobby of a hotel on Starfish Street. The interior and decor looks old, but clean and well-maintained.
+<br><br>
+
+<<if Time.dayState is "night">>
+    Most of the rooms are silent. The guests must be asleep.
+    <br><br>
+<<elseif $exposed gte 1>>
+    You hide beneath the stairwell, conscious of your <<nudity>>.
+    <br><br>
+<<else>>
+
+<</if>>
+
+<<if $stress gte $stressmax and !$possessed>>
+    <span class="red">You've pushed yourself too much.</span> You pass out.
+    <br><br>
+	<<passout_rooms>>
+<<elseif $exposed lt 1 and $housekeeping gte 200 and $rooms_manager is undefined>>
+
+    <<generate1>><<generate2>><<person2>>
+    "Hey!" a <<person>> stopped you in your tracks. "Manager would like to have a talk with you." <<he>> says, escorting you to the security room. A <<person1>><<person>> leaning back against you by the desk. <<person2>><<person>> went out and closes the door behind <<person2>><<him>>.
+    <br><br>
+
+    "I've seen you around.. Frequently if I may add." the <<person1>><<person>> says, while looking at the monitor. "Which is not normal for a high schooler" <<he>> says. <<He>> turns to you. "Nice to meet you, I'm the manager." <<He>> holds out <<his>> hand.
+    <br><br>
+
+    <<link [[Shake|Sketchy Hotel Manager Intro]]>><<set $phase to 1>><<set $rooms_manager to 1>><<saveNPC 0 "rooms_manager">><</link>>
+    <br>
+    <<link [[Don't shake|Sketchy Hotel Manager Intro]]>><<set $phase to 0>><<set $rooms_manager to 1>><<saveNPC 0 "rooms_manager">><</link>>
+    <br>
+
+<<else>>
+	<<set $danger to random(1, 10000)>><<set $dangerevent to 0>>
+	<<if ($danger gte (9900 - $allure) or $eventforced) and $eventskip is 0>>
+        <<cleareventpool>>
+
+        <<if $exposed gte 1>>
+            <<addinlineevent "rooms_exposed_1" 1>>
+                You hear voices up ahead. <<covered>> You turn, but hear voices from that direction as well. <span class="pink">You're trapped.</span>
+                <br><br>
+
+                There's an unlocked window to one side, and two doors to your right. You're not sure if they're locked.
+                <br><br>
+                <<link [[Try a door|Sketchy Hotel Exposed Door]]>><</link>><<difficulty 50>>
+                <br>
+                <<link [[Climb out the window|Sketchy Hotel Exposed Window]]>><</link>>
+                <br>
+
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_exposed_2" 1>>
+                You come to an open door. You hear music, voices, and movement within. You peek around the corner. It looks like a party. It'll be hard to get by without anyone noticing, but perhaps if you're quick people will doubt they saw a thing.
+                <br><br>
+
+                <<link [[Dash by|Sketchy Hotel Exposed Dash]]>><</link>><<difficulty 50>>
+                <br>
+                <<link [[Find a way around (0:05)|Sketchy Hotel]]>><<stress 6>><<pass 5>><<set $eventskip to 1>><</link>><<gstress>>
+                <br>
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_exposed_3" 1>>
+                A pair of feet march down the stairs up ahead, catching you in the open. You crouch behind a large potted plant for cover.
+                <br><br>
+
+                <<generate1>><<person1>>
+                A <<person>> steps into view, walking this way. You'll look odd crouched behind a plant.
+                <br><br>
+
+                <<link [[Stay crouched|Sketchy Hotel Exposed Crouch]]>><</link>>
+                <br>
+                <<link [[Pick up the plant and walk with it|Sketchy Hotel Exposed Pick]]>><</link>><<difficulty 40>>
+                <br>
+            <</addinlineevent>>
+        <<else>>
+            <<addinlineevent "rooms_1" 1>>
+                <<generatey1>><<generatey2>><<generatey3>><<person1>>
+                A <<person>>, <<person2>><<person>>, and <<person3>><<person>> round a corner. You recognise them from school. They're delinquents.
+                <br><br>
+                <<if random(1, 2) is 2>>
+                    <<if $whitneyromance is 1>>
+                        The <<person1>><<person>> steps in front of you. "What's Whitney's <<girl>> doing around here?" <<he>> asks.
+                        <<if random(1, 2) is 2>>
+                            <<He>> pauses, considering, <span class="pink">then shoves you against the wall.</span>. "It doesn't matter. You're in our territory. Get on your knees."<<gtrauma>><<gstress>><<gpain>><<trauma 6>><<stress 6>><<pain 4>>
+                            <br><br>
+
+                            <<link [[Get on your knees|Sketchy Hotel Events Knees]]>><<sub 1>><</link>>
+                            <br>
+                            <<link [[Scream|Sketchy Hotel Events Scream]]>><<pain 4>><</link>><<gpain>>
+                            <br>
+                            <<link [[Fight|Sketchy Hotel Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
+                            <br>
+                        <<else>>
+                            <<He>> pauses, considering, <span class="teal">then steps aside.</span>
+                            <br><br>
+
+                            They watch you walk away.
+                            <br><br>
+
+                            <<link [[Next|Sketchy Hotel]]>><<set $eventskip to 1>><<endevent>><</link>>
+                            <br>
+                        <</if>>
+                    <<else>>
+                        The <<person1>><<person>> steps in front of you. "What's someone like you doing around here?" <<he>> asks, shoving you against the wall. <<His>> friends close in. "Get on your knees."<<gtrauma>><<gstress>><<gpain>><<trauma 6>><<stress 6>><<pain 4>>
+                        <br><br>
+
+                        <<link [[Get on your knees|Sketchy Hotel Events Knees]]>><<sub 1>><</link>>
+                        <br>
+                        <<link [[Scream|Sketchy Hotel Events Scream]]>><<pain 4>><</link>><<gpain>>
+                        <br>
+                        <<link [[Fight|Sketchy Hotel Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
+                        <br>
+                    <</if>>
+                <<else>>
+                    The <<person1>><<person>> pulls a funny face, but they otherwise don't bother you.
+                    <br><br>
+
+                    <<link [[Next|Sketchy Hotel]]>><<set $eventskip to 1>><<endevent>><</link>>
+                    <br>
+                <</if>>
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_2" 1>>
+                <<beastNEWinit 1 dog>>
+                <<generate2>><<person2>>
+                A <<beasttype 0>> walks by, followed by a <<person2>><<person>> holding a lead. <<bHe 0>> stops to sniff you, but the <<person>> jerks <<bhim 0>> away.
+                <br><br>
+
+                <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+                <br>
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_3" 1>>
+                <<generate1>><<person1>>
+                A <<person>> accosts you halfway in a stairwell, placing one arm around your waist, gripping your wrist with the other, and pulling you against <<him>>. "What a cute <<girl>>," <<he>> says, shifting your weight to keep you unsteady. <<He>> leans in to kiss.<<gtrauma>><<gstress>><<trauma 6>><<stress 6>>
+                <br><br>
+
+                <<link [[Slap|Sketchy Hotel Events Slap]]>><<def 1>><</link>><<physiquedifficulty 1 16000>>
+                <br>
+                <<link [[Stomp on foot|Sketchy Hotel Events Stomp]]>><<def 1>><</link>><<physiquedifficulty 5000 13000>>
+                <br>
+                <<link [[Endure|Sketchy Hotel Events Endure]]>><<trauma 6>><<stress 6>><<sub 1>><</link>><<difficulty 50>><<kissvirginitywarning>><<gtrauma>><<gstress>>
+                <br>
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_4" 1>>
+                <<generate1>><<person1>>
+                You pass a <<person>> working as a janitor. <<He>>'s wearing headphones, and doesn't seem to notice you.
+                <br><br>
+                <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+                <br>
+            <</addinlineevent>>
+
+            <<if $room_state is undefined>>
+                <<addinlineevent "rooms_5" 0.6>>
+                    The front door of one of the rooms is ajar, and a purple light glows within. You smell a strange incense.<<garousal>><<arousal 600>><<set $hallucinogen += 10>>
+                    <br><br>
+                    <<link [[Investigate|Sketchy Hotel Unoccupied Room]]>><<set $hallucinogen += 10>><</link>>
+                    <br>
+                    <<link [[Ignore|Sketchy Hotel]]>><</link>>
+                    <br>
+                <</addinlineevent>>
+            <</if>>
+
+            <<addinlineevent "rooms_6" 1>>
+                <<generate1>><<person1>>
+                A <<person>> leers openly as <<he>> walks by, turning <<his>> head to look behind <<him>>.
+                <br><br>
+
+                <<if $promiscuity gte 35>>
+                    <i>Charging less will make <<him>> easier to convince.</i>
+                    <br><br>
+                    <<link [[Solicit for £50|Sketchy Hotel Events Solicit]]>><<set $phase to 1>><</link>><<promiscuous3>>
+                    <br>
+                    <<link [[Solicit for £100|Sketchy Hotel Events Solicit]]>><<set $phase to 2>><</link>><<promiscuous3>>
+                    <br>
+                    <<link [[Solicit for £150|Sketchy Hotel Events Solicit]]>><<set $phase to 3>><</link>><<promiscuous3>>
+                    <br>
+                <<else>>
+                    <span class="blue">You're not promiscuous enough to take advantage.</span>
+                    <br><br>
+                <</if>>
+                <<link [[Ignore|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+                <br>
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_7" 1>>
+                <<generatey1>><<generatey2>><<person1>>
+                A <<person>> and <<person2>><<person>> chat under a stairwell. They lower their voices as you walk by.
+                <br><br>
+
+                <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+                <br>
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_8" 1>>
+                You hear shouting from one of the rooms, but it doesn't sound like anyone's in danger.
+                <br><br>
+
+                <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+                <br>
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_9" 1>>
+                <<dancedifficulty 1 200 true>>
+                <<if $danceSuccess>>
+                    You skid on a wet floor, spin, <span class="green">but manage to keep your footing.</span>
+                    <br><br>
+
+                    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+                    <br>
+                <<else>>
+                    You skid on a wet floor, <span class="red">and lose your footing.</span> You land on your <<bottom>>.<<gpain>><<pain 4>><<gstress>><<stress 6>>
+                    <br><br>
+
+                    <<link [[Next|Sketchy Hotel]]>><<endevent>><<set $eventskip to 1>><</link>>
+                    <br>
+                <</if>>
+            <</addinlineevent>>
+
+            <<addinlineevent "rooms_10" 1>>
+                A <<generate1>><<person1>><<person>> seems to be following you.
+                <br><br>
+
+                <<link [[Ignore|Sketchy Hotel Events Ignore]]>><</link>><<difficulty 90>>
+                <br>
+                <<link [[Run|Sketchy Hotel Events Run]]>><<stress 6>><</link>><<gstress>>
+                <br>
+            <</addinlineevent>>
+        <</if>>
+
+        <<runeventpool>>
+	<<else>>
+        <<if Time.dayState is "night">>
+            <<dooricon>><<link [[Approach one of the rooms (0:01)|Sketchy Hotel Lock]]>><<pass 1>><</link>>
+            <br>
+        <<elseif $exposed lt 1>>
+            <<if $rooms_progress is undefined>>
+                <<dooricon>><<link [[Approach the front desk (0:01)|Sketchy Hotel Front Desk Intro]]>><<pass 1>><</link>>
+                <br>
+            <<else>>
+                <<dooricon>><<link [[Knock on a door (0:01)|Sketchy Hotel Knock]]>><<pass 1>><</link>>
+                <br>
+            <</if>>
+        <</if>>
+        <<if $rooms_window_init gte 2 and $exposed lt 1>>
+            <<if Time.dayState is "night">>
+                <span class="blue">You need more daylight to work as a window cleaner.</span>
+                <br>
+            <<else>>
+                <<link [[Work as a window cleaner (1:00)|Sketchy Hotel Window]]>><<housekeeping 1 300>><</link>><<ghousekeeping 300>>
+                <br>
+            <</if>>
+        <</if>>
+        <<if $room_state gte 2>>
+            <<dooricon "open">><<link [[Room 211 (0:01)|Sketchy Hotel Unoccupied Room]]>><<pass 1>><</link>>
+            <br>
+        <<elseif $exposed lt 1>>
+            <<dooricon "open">><<link [[Room 211 (0:20)|Sketchy Hotel Unoccupied Room]]>><<pass 20>><</link>>
+            <br>
+        <</if>>
+        <<if $rooms_manager is 1 or $rooms_manager is 2>>
+            <<if Time.dayState is "day">>
+                <<if $exposed lt 1>>
+                    <<ind>><<link [[Manager's office (0:01)|Sketchy Hotel Manager]]>><<pass 1>><</link>>
+                    <br>
+                <</if>>
+            <<else>>
+                <<ind>><span class="blue">The manager's office is closed for the night.</span>
+                <br>
+            <</if>>
+        <</if>>
+        <br><br>
+        <<ind>><<link [[Leave|Starfish Street]]>><</link>>
+        <br>
+    <</if>>
+<</if>>
+<<set $eventskip to 0>>
